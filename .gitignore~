@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Windows
 [Dd]esktop.ini
 Thumbs.db
@@ -12,7 +13,7 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
-
+=======
 # Logs
 logs
 *.log
@@ -74,3 +75,4 @@ typings/
 
 # next.js build output
 .next
+>>>>>>> 82f7f52bd0d5331eba4ed3608f00df1dd452f556
