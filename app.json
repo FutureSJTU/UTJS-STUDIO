@@ -1,13 +1,48 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/studio/studio",
+    "pages/community/community",
+    "pages/share/share",
+    "pages/me/me"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "UTJS Studio",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/studio/studio",
+        "text": "自习",
+        "iconPath": "img/studio.png",
+        "selectedIconPath": "img/studio_select.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "问答",
+        "iconPath": "img/community.png",
+        "selectedIconPath": "img/community_select.png"
+      },
+      {
+        "pagePath": "pages/share/share",
+        "text": "分享",
+        "iconPath": "img/share.png",
+        "selectedIconPath": "img/share_select.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "img/me.png",
+        "selectedIconPath": "img/me_select.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

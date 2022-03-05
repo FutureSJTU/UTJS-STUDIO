@@ -1,0 +1,5 @@
+/* pages/share/share.wxss */
+.intro {
+  margin: 30px;
+  text-align: center;
+}
