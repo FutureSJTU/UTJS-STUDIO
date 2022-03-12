@@ -1,9 +1,8 @@
 {
   "pages": [
-    "pages/studio/studio",
-    "pages/community/community",
-    "pages/share/share",
-    "pages/me/me"
+    "pages/landmark/landmark",
+    "pages/study/study",
+    "pages/meee/meee"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,28 +19,22 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/studio/studio",
-        "text": "自习",
-        "iconPath": "img/studio.png",
-        "selectedIconPath": "img/studio_select.png"
+        "pagePath": "pages/landmark/landmark",
+        "text": "教学楼",
+        "iconPath": "img/landmark.png",
+        "selectedIconPath": "img/landmark_select.png"
       },
       {
-        "pagePath": "pages/community/community",
-        "text": "问答",
-        "iconPath": "img/community.png",
-        "selectedIconPath": "img/community_select.png"
+        "pagePath": "pages/study/study",
+        "text": "自习室",
+        "iconPath": "img/study.png",
+        "selectedIconPath": "img/study_select.png"
       },
       {
-        "pagePath": "pages/share/share",
-        "text": "分享",
-        "iconPath": "img/share.png",
-        "selectedIconPath": "img/share_select.png"
-      },
-      {
-        "pagePath": "pages/me/me",
+        "pagePath": "pages/meee/meee",
         "text": "我的",
-        "iconPath": "img/me.png",
-        "selectedIconPath": "img/me_select.png"
+        "iconPath": "img/meee.png",
+        "selectedIconPath": "img/meee_select.png"
       }
     ]
   },

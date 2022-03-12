@@ -1,4 +1,4 @@
-// pages/share/share.js
+// pages/study/study.js
 Page({
 
   /**

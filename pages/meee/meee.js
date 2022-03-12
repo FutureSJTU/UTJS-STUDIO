@@ -1,4 +1,4 @@
-// pages/studio/studio.js
+// pages/meee/meee.js
 Page({
 
   /**
