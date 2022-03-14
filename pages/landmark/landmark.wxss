@@ -1,56 +1,55 @@
 /* pages/landmark/landmark.wxss */
-.mine1{
-  position:absolute;
-  border-radius:30rpx;
-  width: 300rpx;
-  height: 70rpx;
-  margin-top: 80rpx;
-  margin-left: -30rpx;
+.mine1 {
   float: center;
-  left:25%;
-  background: linear-gradient(#ccfbff, #ef96c5); 
+  border-radius: 100rpx;
+  margin-top: 40rpx;
+  margin: 80 auto;
+  line-height: 60rpx;
+  background: #d9b8f1;
 }
-.mine2{
-  position:absolute;
-  border-radius:30rpx;
-  width: 300rpx;
-  height: 70rpx;
-  margin-top:200rpx;
-  margin-left: -30rpx;
+
+.mine2 {
   float: center;
-  left:25%;
-  background:skyblue;
+  border-radius: 100rpx;
+  margin-top: 40rpx;
+  margin: 80 auto;
+  line-height: 60rpx;
+  background: #f1ccb8;
 }
-.mine3{
-  position:absolute;
-  border-radius:30rpx;
-  width: 300rpx;
-  height: 70rpx;
-  margin-top:320rpx;
-  margin-left: -30rpx;
+
+.mine3 {
   float: center;
-  left:25%;
-  background:skyblue;
+  border-radius: 100rpx;
+  margin-top: 40rpx;
+  margin: 80 auto;
+  line-height: 60rpx;
+  background: #f1f1b8;
 }
-.mine4{
-  position:absolute;
-  border-radius:30rpx;
-  width: 300rpx;
-  height: 70rpx;
-  margin-top:440rpx;
-  margin-left: -30rpx;
+
+.mine4 {
+
   float: center;
-  left:25%;
-  background:skyblue;
+  border-radius: 100rpx;
+  margin-top: 40rpx;
+  margin: 80 auto;
+  line-height: 60rpx;
+  background: #b8f1ed;
 }
-.mine5{
-  position:absolute;
-  border-radius:30rpx;
+
+.mine5 {
+  /* position: absolute;
+  border-radius: 30rpx;
   width: 300rpx;
   height: 70rpx;
-  margin-top:560rpx;
+  margin-top: 560rpx;
   margin-left: -30rpx;
   float: center;
-  left:25%;
-  background:skyblue;
+  left: 25%;
+  background: skyblue;*/
+  float: center;
+  border-radius: 100rpx;
+  margin-top: 40rpx;
+  margin: 80 auto;
+  line-height: 60rpx;
+  background: #b8f1cc;
 }

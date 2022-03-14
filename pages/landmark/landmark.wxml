@@ -1,21 +1,11 @@
 <!--pages/landmark/landmark.wxml-->
 
-<view class="mine1">
-<button bindtap='gotozhutu' >主图书馆</button>
-</view>
+<button class="mine1" bindtap='gotozhutu'>主图书馆</button>
 
-<view class="mine2">
-<button bindtap='gotobaotu' >包玉刚图书馆</button>
-</view>
+<button class="mine2" bindtap='gotobaotu'>包玉刚图书馆</button>
 
-<view class="mine3">
-<button bindtap='gotolitu' >李政道图书馆 </button>
-</view>
+<button class="mine3" bindtap='gotolitu'>李政道图书馆 </button>
 
-<view class="mine4">
-<button bindtap='gotozhongyuan' >中院</button>
-</view>
+<button class="mine4" bindtap='gotozhongyuan'>中院</button>
 
-<view class="mine5">
-<button bindtap='gotodongxia' >东下院</button>
-</view>
+<button class="mine5" bindtap='gotodongxia'>东下院</button>
