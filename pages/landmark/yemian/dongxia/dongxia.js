@@ -1,4 +1,4 @@
-// pages/landmark/landmark.js
+// pages/landmark/yemian/dongxia/dongxia.js
 Page({
 
   /**
@@ -7,31 +7,6 @@ Page({
   data: {
 
   },
-  gotozhutu :function () {
-    wx.navigateTo({
-      url: '/pages/landmark/yemian/zhutu/zhutu',
-    })
-  },
-  gotobaotu :function () {
-   wx.navigateTo({
-     url: '/pages/landmark/yemian/baotu/baotu',
-   })
- },
- gotolitu :function () {
-   wx.navigateTo({
-     url: '/pages/landmark/yemian/litu/litu',
-   })
- },
- gotozhongyuan :function () {
-   wx.navigateTo({
-     url: '/pages/landmark/yemian/zhongyuan/zhongyuan',
-   })
- },
- gotodongxia :function () {
-   wx.navigateTo({
-     url: '/pages/landmark/yemian/dongxia/dongxia',
-   })
- },
 
   /**
    * 生命周期函数--监听页面加载

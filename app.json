@@ -2,7 +2,12 @@
   "pages": [
     "pages/landmark/landmark",
     "pages/study/study",
-    "pages/meee/meee"
+    "pages/meee/meee",
+    "pages/landmark/yemian/baotu/baotu",
+    "pages/landmark/yemian/dongxia/dongxia",
+    "pages/landmark/yemian/litu/litu",
+    "pages/landmark/yemian/zhongyuan/zhongyuan",
+    "pages/landmark/yemian/zhutu/zhutu"
   ],
   "window": {
     "backgroundTextStyle": "light",

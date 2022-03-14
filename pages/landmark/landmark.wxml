@@ -1,2 +1,21 @@
 <!--pages/landmark/landmark.wxml-->
-<text>pages/landmark/landmark.wxml</text>
+
+<view class="mine1">
+<button bindtap='gotozhutu' >主图书馆</button>
+</view>
+
+<view class="mine2">
+<button bindtap='gotobaotu' >包玉刚图书馆</button>
+</view>
+
+<view class="mine3">
+<button bindtap='gotolitu' >李政道图书馆 </button>
+</view>
+
+<view class="mine4">
+<button bindtap='gotozhongyuan' >中院</button>
+</view>
+
+<view class="mine5">
+<button bindtap='gotodongxia' >东下院</button>
+</view>

@@ -1,1 +1,56 @@
 /* pages/landmark/landmark.wxss */
+.mine1{
+  position:absolute;
+  border-radius:30rpx;
+  width: 300rpx;
+  height: 70rpx;
+  margin-top: 80rpx;
+  margin-left: -30rpx;
+  float: center;
+  left:25%;
+  background: linear-gradient(#ccfbff, #ef96c5); 
+}
+.mine2{
+  position:absolute;
+  border-radius:30rpx;
+  width: 300rpx;
+  height: 70rpx;
+  margin-top:200rpx;
+  margin-left: -30rpx;
+  float: center;
+  left:25%;
+  background:skyblue;
+}
+.mine3{
+  position:absolute;
+  border-radius:30rpx;
+  width: 300rpx;
+  height: 70rpx;
+  margin-top:320rpx;
+  margin-left: -30rpx;
+  float: center;
+  left:25%;
+  background:skyblue;
+}
+.mine4{
+  position:absolute;
+  border-radius:30rpx;
+  width: 300rpx;
+  height: 70rpx;
+  margin-top:440rpx;
+  margin-left: -30rpx;
+  float: center;
+  left:25%;
+  background:skyblue;
+}
+.mine5{
+  position:absolute;
+  border-radius:30rpx;
+  width: 300rpx;
+  height: 70rpx;
+  margin-top:560rpx;
+  margin-left: -30rpx;
+  float: center;
+  left:25%;
+  background:skyblue;
+}
