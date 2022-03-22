@@ -1,4 +1,4 @@
-// pages/litu/litu.js
+// pages/study/baotu/baotu.js
 Page({
 
   /**

@@ -1,4 +1,4 @@
-// pages/zhongyuan/zhongyuan.js
+// pages/study/litu/litu.js
 Page({
 
   /**

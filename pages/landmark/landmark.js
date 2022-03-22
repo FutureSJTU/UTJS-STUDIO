@@ -9,45 +9,45 @@ Page({
     swiperList: [{
       id: 0,
       type: 'image',
-      url: '/img/swiper/0.png'
+      url: 'https://s3.bmp.ovh/imgs/2022/03/278c8406b400279d.png'
     }, {
       id: 1,
       type: 'image',
-      url: '/img/swiper/1.png',
+      url: 'https://s3.bmp.ovh/imgs/2022/03/656fb158f41ae663.png',
     }, {
       id: 2,
       type: 'image',
-      url: '/img/swiper/2.png'
+      url: 'https://s3.bmp.ovh/imgs/2022/03/7cd0f47681aad3a2.png'
     }],
   },
   gotozhutu: function () {
     wx.navigateTo({
-      url: '/pages/zhutu/zhutu',
+      url: '/pages/study/zhutu/zhutu',
     })
   },
   gotobaotu: function () {
     wx.navigateTo({
-      url: '/pages/baotu/baotu',
+      url: '/pages/study/baotu/baotu',
     })
   },
   gotolitu: function () {
     wx.navigateTo({
-      url: '/pages/litu/litu',
+      url: '/pages/study/litu/litu',
     })
   },
   gotozhongyuan: function () {
     wx.navigateTo({
-      url: '/pages/zhongyuan/zhongyuan',
+      url: '/pages/study/zhongyuan/zhongyuan',
     })
   },
   gotodongxia: function () {
     wx.navigateTo({
-      url: '/pages/dongxia/dongxia',
+      url: '/pages/study/dongxia/dongxia',
     })
   },
  gotosiyuan: function () {
     wx.navigateTo({
-      url: '/pages/siyuan/siyuan',
+      url: '/pages/study/siyuan/siyuan',
     })
   },
 

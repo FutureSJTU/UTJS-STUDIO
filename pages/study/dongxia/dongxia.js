@@ -1,4 +1,4 @@
-// pages/study/study.js
+// pages/study/dongxia/dongxia.js
 Page({
 
   /**

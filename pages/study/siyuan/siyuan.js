@@ -1,4 +1,4 @@
-// pages/baotu/baotu.js
+// pages/study/siyuan/siyuan.js
 Page({
 
   /**

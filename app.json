@@ -1,14 +1,13 @@
 {
   "pages": [
     "pages/landmark/landmark",
-    "pages/study/study",
     "pages/meee/meee",
-    "pages/baotu/baotu",
-    "pages/dongxia/dongxia",
-    "pages/litu/litu",
-    "pages/zhongyuan/zhongyuan",
-    "pages/zhutu/zhutu",
-    "pages/siyuan/siyuan"
+    "pages/study/baotu/baotu",
+    "pages/study/dongxia/dongxia",
+    "pages/study/litu/litu",
+    "pages/study/zhongyuan/zhongyuan",
+    "pages/study/zhutu/zhutu",
+    "pages/study/siyuan/siyuan"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,15 +25,9 @@
     "list": [
       {
         "pagePath": "pages/landmark/landmark",
-        "text": "教学楼",
+        "text": "场所",
         "iconPath": "img/landmark.png",
         "selectedIconPath": "img/landmark_select.png"
-      },
-      {
-        "pagePath": "pages/study/study",
-        "text": "自习室",
-        "iconPath": "img/study.png",
-        "selectedIconPath": "img/study_select.png"
       },
       {
         "pagePath": "pages/meee/meee",
