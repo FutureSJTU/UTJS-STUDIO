@@ -1,4 +1,4 @@
-// pages/landmark/yemian/baotu/baotu.js
+// pages/dongxia/dongxia.js
 Page({
 
   /**

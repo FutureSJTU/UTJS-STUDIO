@@ -1,4 +1,4 @@
-// pages/landmark/yemian/litu/litu.js
+// pages/litu/litu.js
 Page({
 
   /**

@@ -1,11 +1,48 @@
 <!--pages/landmark/landmark.wxml-->
+<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    </view>
+  </swiper-item>
+</swiper>
 
-<button class="mine1" bindtap='gotozhutu'>主图书馆</button>
+<view class="grid col-2 padding-sm">
+  <view class="padding-sm" bindtap="gotozhutu">
+    <view class="bg-gradual-red padding radius text-center shadow-blur">
+      <view class="text-lg">主图书馆</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在馆</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="gotobaotu">
+    <view class="bg-gradual-orange padding radius text-center shadow-blur">
+      <view class="text-lg">包玉刚图书馆</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在馆</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="gotolitu">
+    <view class="bg-gradual-green padding radius text-center shadow-blur">
+      <view class="text-lg">李政道图书馆</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在馆</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="gotozhongyuan">
+    <view class="bg-gradual-blue padding radius text-center shadow-blur">
+      <view class="text-lg">中院</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在馆</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="gotodongxia">
+    <view class="bg-gradual-purple padding radius text-center shadow-blur">
+      <view class="text-lg">东下院</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在馆</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="gotosiyuan">
+    <view class="bg-gradual-pink padding radius text-center shadow-blur">
+      <view class="text-lg">思源湖畔</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在馆</view>
+    </view>
+  </view>
+</view>
 
-<button class="mine2" bindtap='gotobaotu'>包玉刚图书馆</button>
-
-<button class="mine3" bindtap='gotolitu'>李政道图书馆 </button>
-
-<button class="mine4" bindtap='gotozhongyuan'>中院</button>
-
-<button class="mine5" bindtap='gotodongxia'>东下院</button>

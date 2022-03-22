@@ -3,11 +3,12 @@
     "pages/landmark/landmark",
     "pages/study/study",
     "pages/meee/meee",
-    "pages/landmark/yemian/baotu/baotu",
-    "pages/landmark/yemian/dongxia/dongxia",
-    "pages/landmark/yemian/litu/litu",
-    "pages/landmark/yemian/zhongyuan/zhongyuan",
-    "pages/landmark/yemian/zhutu/zhutu"
+    "pages/baotu/baotu",
+    "pages/dongxia/dongxia",
+    "pages/litu/litu",
+    "pages/zhongyuan/zhongyuan",
+    "pages/zhutu/zhutu",
+    "pages/siyuan/siyuan"
   ],
   "window": {
     "backgroundTextStyle": "light",

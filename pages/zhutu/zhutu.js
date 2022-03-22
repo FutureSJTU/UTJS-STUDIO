@@ -1,4 +1,4 @@
-// pages/landmark/yemian/zhutu/zhutu.js
+// pages/zhutu/zhutu.js
 Page({
 
   /**
