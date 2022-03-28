@@ -1,0 +1,12 @@
+<view class="container">
+    <view class="logo-name">SJTU studio</view>
+    <view class="intro">线上自习室</view>
+    <view class="login">请完成微信授权继续使用</view>
+
+    <button class="btn-login" bindtap="getUserProfile">
+        <view class="img-w"></view>
+        <view class="text">微信快捷登录</view>
+    </button>
+
+    <view class="cancel" bindtap="goBack">取消</view>
+</view>

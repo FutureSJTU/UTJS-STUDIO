@@ -1,0 +1,141 @@
+/* pages/UserCenter/UserCenter.wxss */
+page {
+  min-height: 100%;
+  background-color: #fafafa;
+}
+
+.userinfo {
+  display: flex;
+  width: 100%;
+  margin-bottom: 24rpx;
+  box-sizing: border-box;
+  position: relative;
+  background: #fff;
+  flex-direction: column;
+}
+
+.btn-login {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+
+.head-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30rpx;
+  padding: 30rpx 0;
+  /* border-bottom: 1rpx solid #f1f1f1; */
+}
+
+.head-wrap .no-login-avatar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.head-wrap .no-login-avatar .no-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  position: relative;
+  margin-right: 20rpx;
+}
+
+.head-wrap .no-login-avatar .no-avatar .avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 90rpx;
+}
+
+.head-wrap .head-l {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.head-wrap .head-l .l {
+  width: 110rpx;
+  height: 110rpx;
+  position: relative;
+  margin-right: 20rpx;
+}
+
+.head-wrap .head-l .l .avatar-wrap {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.head-wrap .head-l .l .avatar {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 90rpx;
+}
+
+.head-wrap .head-l .l .crown {
+  position: absolute;
+  right: -10rpx;
+  top: -10rpx;
+  width: 30rpx;
+  height: 30rpx;
+  transform: rotate(45deg);
+}
+
+.head-wrap .head-l .l .crown .icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.head-wrap .head-l .r {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.head-wrap .head-l .r .name {
+  font-size: 34rpx;
+  color: #192841;
+  font-weight: 500;
+  margin-right: 10rpx;
+}
+
+.head-wrap .head-r .arrow {
+  width: 10rpx;
+  height: 10rpx;
+  border-top: 4rpx solid #ccc;
+  border-right: 4rpx solid #ccc;
+  transform: rotate(45deg);
+}
+
+.time-container {
+  width: 100%;
+  background: #fff;
+  height: auto;
+  margin-bottom: 24rpx;
+}
+
+.order-container .header {
+  height: 90rpx;
+  margin: 0 30rpx;
+  font-size: 30rpx;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-title {
+  width: 200rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.top-title .left-line {
+  width: 6rpx;
+  height: 20rpx;
+  margin-right: 20rpx;
+  background: #d33635;
+}
