@@ -1,2 +1,22 @@
 <!--pages/study/zhutu/zhutu.wxml-->
-<text>pages/study/zhutu/zhutu.wxml</text>
+<!-- <view class="bg-img bg-mask padding-tb-xl" style="background-image: url('https://s3.bmp.ovh/imgs/2022/03/01bcd122d029a625.jpg');height: auto;">
+</view> -->
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text>学习时长：
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="DrawerModalL">代办列表</button>
+  </view>
+</view>
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModalL'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{5}}" wx:key>
+        <view class="content">
+          <view>Item {{index +1}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
