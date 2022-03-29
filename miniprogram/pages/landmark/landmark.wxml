@@ -1,0 +1,51 @@
+<!--pages/landmark/landmark.wxml-->
+<scroll-view scroll-y class="scrollPage">
+  <image src='../../images/bar/top_bar_i.png' mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
+</scroll-view>
+
+<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item wx:for="{{swiperList}}" wx:key="id" class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    </view>
+  </swiper-item>
+</swiper>
+
+<view class="grid col-2 padding-sm">
+  <view class="padding-sm" bindtap="gotozhutu">
+    <view class="bg-gradual-red padding radius text-center shadow-blur">
+      <view class="text-lg">图书馆主馆</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="gotobaotu">
+    <view class="bg-gradual-orange padding radius text-center shadow-blur">
+      <view class="text-lg">包玉刚图书馆</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="gotolitu">
+    <view class="bg-gradual-green padding radius text-center shadow-blur">
+      <view class="text-lg">李政道图书馆</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="gotozhongyuan">
+    <view class="bg-gradual-blue padding radius text-center shadow-blur">
+      <view class="text-lg">中院</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="gotodongxia">
+    <view class="bg-gradual-purple padding radius text-center shadow-blur">
+      <view class="text-lg">东下院</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+    </view>
+  </view>
+  <view class="padding-sm" bindtap="gotosiyuan">
+    <view class="bg-gradual-pink padding radius text-center shadow-blur">
+      <view class="text-lg">思源湖畔</view>
+      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+    </view>
+  </view>
+</view>

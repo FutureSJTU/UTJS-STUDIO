@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/landmark/landmark",
+    "pages/study/baotu/baotu",
+    "pages/study/dongxia/dongxia",
+    "pages/study/litu/litu",
+    "pages/study/zhongyuan/zhongyuan",
+    "pages/study/zhutu/zhutu",
+    "pages/study/siyuan/siyuan",
+    "pages/UserCenter/index/UserCenter",
+    "pages/app-auth/index",
+    "pages/list/index",
+    "pages/add/index",
+    "pages/file/index",
+    "pages/edit/index",
+    "pages/detail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "UTJS Studio",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/landmark/landmark",
+        "text": "场馆",
+        "iconPath": "images/bar/landmark.png",
+        "selectedIconPath": "images/bar/landmark_select.png"
+      },
+      {
+        "pagePath": "pages/UserCenter/index/UserCenter",
+        "text": "我的",
+        "iconPath": "images/bar/meee.png",
+        "selectedIconPath": "images/bar/meee_select.png"
+      }
+    ]
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
