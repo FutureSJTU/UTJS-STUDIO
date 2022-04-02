@@ -1,6 +1,6 @@
 # UTJS-Studio: SJTUer线上学习社区
 
-![top_bar_img](/img/top_bar_i.png)
+![top_bar_img](/miniprogram/images/bar/top_bar_i.png)
 
 ## 🏠 预览
 

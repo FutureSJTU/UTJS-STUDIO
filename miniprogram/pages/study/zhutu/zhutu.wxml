@@ -1,4 +1,10 @@
 <!--pages/study/zhutu/zhutu.wxml-->
-<view class="padding flex flex-direction">
+<!-- <view class="padding flex flex-direction">
   <button class="cu-btn bg-grey lg" bindtap="goTodoList">代办列表</button>
+</view> -->
+<!-- <view class="bg-full">bg</view> -->
+<view class="content">
+	<!--pics文件夹下的background.jpg文件-->
+	<image class='bg-full' src="../../../images/room/bg.jpg" mode="aspectFill"></image>
+	<!--页面其它部分-->
 </view>
