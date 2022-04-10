@@ -1,1 +1,6 @@
 /* pages/study/zhongyuan/zhongyuan.wxss */
+image
+{
+  width: 400px;
+  height: 700px;
+}
