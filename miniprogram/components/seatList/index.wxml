@@ -1,0 +1,51 @@
+<wxs src="../../pages/util.wxs" module="tools" />
+<view class="seatings">
+  <view class="seatings_signs">
+    <view class="signs_normal">
+      <view class="seatNormal"></view> <text>普通区</text> 
+    </view>
+    <view class="signs_excellent">
+      <view class="seatExcellent"></view> <text>优选区</text> 
+    </view>
+  </view>
+  <view class="seatings_visual">
+  <movable-area>
+  <movable-view 
+    direction="all" 
+    scale="{{true}}"
+    scale-min="0.3" 
+    scale-max="1.5">
+  <view class="emptyBox"></view>
+    <view class="visual_screen">
+      <view class="screen"></view>
+    </view>
+  <view class="visual_title">{{buildingName}}</view>
+    <view class="visual_seatings">
+    <view class="visual_seating">
+    <block wx:for="{{seatings}}" 
+      wx:key="Index"
+      data-index="index">
+      <view wx:if="{{item == 1}}">
+        <view 
+        class="seatNormal {{tools.indexOf(selectedIndex, index)?'selected': ''}}" 
+          data-index="{{index}}"
+          bindtap="selected"></view>
+      </view>
+      <view wx:elif="{{item == 2}}">
+        <view 
+          class="seatExcellent {{tools.indexOf(selectedIndex, index)?'selected': ''}}" 
+          data-index="{{index}}"
+          bindtap="selected"></view>
+      </view>
+      <view wx:elif="{{item == 3}}"
+        class="seatChosen"></view>
+      <view wx:else>
+        <view class="seatNone"></view>
+      </view>
+    </block>
+   </view>
+    </view>
+    </movable-view>
+    </movable-area>
+    </view>
+  </view>
