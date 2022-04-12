@@ -3,8 +3,7 @@
   <button class="cu-btn bg-grey lg" bindtap="goTodoList">代办列表</button>
 </view> -->
 <!-- <view class="bg-full">bg</view> -->
-<view class="content">
-	<!--pics文件夹下的background.jpg文件-->
-	<image class='bg-full' src="../../../images/room/bg.jpg" mode="aspectFill"></image>
-	<!--页面其它部分-->
-</view>
+<!-- <view class="padding flex flex-direction">
+  <button class="cu-btn bg-grey lg" bindtap="goTodoList">代办列表</button>
+</view> -->
+<image mode="scaleToFill" src="http://m.qpic.cn/psc?/V52DO5y10hISBZ2vHb1Q17XtI74WVMQ0/45NBuzDIW489QBoVep5mcfgyFp84gHCOxlhs334.GqOJguJ23Tm9rJY6AnT1vp.UQNMKcbPgHhyv66GRf7iN05UIR7M4fqC6q6IrfKxMaVA!/b&bo=uwJgBLsCYAQBFzA!&rf=viewer_4"></image>
