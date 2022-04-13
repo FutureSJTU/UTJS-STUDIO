@@ -4,7 +4,7 @@
 
 ## 🏠 预览
 
-UTJS-Studio是面向SJTUer的线上学习社区
+UTJS-Studio是面向线上学习社区
 主页预览如下
 
 ![主页](https://s3.bmp.ovh/imgs/2022/03/3ade3d156114dc80.jpg)
