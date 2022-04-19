@@ -1,1 +1,6 @@
 /* pages/study/dongxia/dongxia.wxss */
+image
+{
+  width: 400px;
+  height: 700px;
+}

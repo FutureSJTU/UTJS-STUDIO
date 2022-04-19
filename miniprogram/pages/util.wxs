@@ -4,6 +4,15 @@ var filterStr = function (str, limit) {
   return str.length > limit ? str.substring(0, limit) + "..." : str
 }
 
+function indexOf(arr, value) {
+  if (arr.indexOf(value) < 0) {
+      return false;
+  } else {
+      return true;
+  }
+}
+
 module.exports = {
-  filterStr: filterStr
+  filterStr: filterStr,
+  indexOf: indexOf
 }

@@ -1,2 +1,8 @@
-<!--pages/study/siyuan/siyuan.wxml-->
-<text>pages/study/siyuan/siyuan.wxml</text>
+<view class="page">
+<!-- <position-toast wx:if="isPositionPermited"/>
+  <banner-swiper pics="{{pics}}"/>
+  <block wx:for="{{menus}}" wx:key="index">
+    <menus-item menu="{{item}}"/>
+  </block> -->
+  <seatList seatings="{{seatings}}" hallNumber="{{buildingName}}"/>
+</view>
