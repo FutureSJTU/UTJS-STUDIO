@@ -16,7 +16,9 @@ App({
       fileLimit: 2,
       // users info
       userInfo: null,
-      total_study_time: 10
+      total_study_time: 10,
+      total_come_day: 10,
+      total_task_finish: 10
     }
   },
 

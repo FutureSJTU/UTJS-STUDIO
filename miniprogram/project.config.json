@@ -1,5 +1,5 @@
 {
-    "description": "Project configuration file",
+    "description": "项目配置文件",
     "packOptions": {
         "ignore": []
     },
@@ -10,7 +10,7 @@
         "postcss": true,
         "preloadBackgroundData": false,
         "minified": true,
-        "newFeature": true,
+        "newFeature": false,
         "coverView": true,
         "nodeModules": false,
         "autoAudits": false,
@@ -20,7 +20,7 @@
         "checkInvalidKey": true,
         "checkSiteMap": true,
         "uploadWithSourceMap": true,
-        "compileHotReLoad": true,
+        "compileHotReLoad": false,
         "lazyloadPlaceholderEnable": false,
         "useMultiFrameRuntime": true,
         "useApiHook": true,
@@ -36,30 +36,35 @@
         "packNpmRelationList": [],
         "minifyWXSS": true,
         "disableUseStrict": false,
+        "minifyWXML": true,
         "showES6CompileOption": false,
         "useCompilerPlugins": false,
-        "ignoreUploadUnusedFiles": true,
-        "minifyWXML": true
+        "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
-    "libVersion": "2.14.1",
+    "libVersion": "2.23.4",
     "appid": "wxef1ba93731aaf78d",
     "projectname": "UTJS_Studio",
-    "miniprogramRoot": "miniprogram/",
-    "cloudfunctionRoot": "cloudfunctions/",
-    "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
-    "watchOptions": {
-        "ignore": []
-    },
     "debugOptions": {
         "hidedInDevtools": []
     },
     "scripts": {},
+    "staticServerOptions": {
+        "baseURL": "",
+        "servePath": ""
+    },
+    "isGameTourist": false,
     "condition": {
-        "plugin": {
+        "search": {
+            "list": []
+        },
+        "conversation": {
             "list": []
         },
         "game": {
+            "list": []
+        },
+        "plugin": {
             "list": []
         },
         "gamePlugin": {
