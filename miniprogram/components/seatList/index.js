@@ -20,6 +20,14 @@ Component({
   },
 
   /**
+   * Todo List
+   */
+  goTodoList: function(){
+    wx.navigateTo({
+      url: '../../list/index',
+    })
+  },
+  /**
    * 组件的方法列表
    */
   methods: {
@@ -33,7 +41,7 @@ Component({
           selectedNum
         })
       } else {
-        if (this.data.selectedNum < 6) {
+        if (this.data.selectedNum < 1) {
           let selectedNum = this.data.selectedNum + 1;
           let selectedIndex = this.data.selectedIndex.concat(index);
           this.setData({
@@ -42,7 +50,7 @@ Component({
           })
         } else {
           wx.showToast({
-            title: '最多选择六张票',
+            title: '最多选择一个座',
           })
         }
       }
