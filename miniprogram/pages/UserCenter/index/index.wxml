@@ -1,0 +1,32 @@
+<!--pages/UserCenter/UserCenter.wxml-->
+<view class="container">
+    <view class="head">
+        <block wx:if="{{!hasUserInfo}}">
+            <image class="avatar" src="../../../images/login/default_avatar_big.png"></image>
+            <image class="banner" src="../../../images/login/banner.png"></image>
+            <text class="greet" bindtap="getUserProfile">点此登录</text>
+        </block>
+        <block wx:else>
+            <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+            <image class="banner" src="../../../images/login/banner.png"></image>
+            <text class="greet" bindtap="editName">你好，{{userInfo.nickName}}</text>
+        </block>
+    </view>
+    <modal hidden="{{hiddenmodalput}}" title="修改昵称" confirm-text="提交" cancel-text="取消" bindcancel="cancelInput" bindconfirm="confirmInput">
+        <input type='text' placeholder="输入新昵称" bindinput="nameInput" auto-focus />
+    </modal>
+    <view class="data" wx:if="{{hasUserInfo}}">
+        <view class="data_block" style="margin-left: 10rpx;">
+            <text style="font-size: xxx-large; font-weight: bolder; color: white;">{{total_study_time}}</text>
+            <text style="font-size: small; font-weight: bold; color: white;">小时</text>
+        </view>
+        <view class="data_block" style="margin-left: 260rpx;">
+            <text style="font-size: xxx-large; font-weight: bolder; color: white;">{{total_come_day}}</text>
+            <text style="font-size: small; font-weight: bold; color: white;">签到</text>
+        </view>
+        <view class="data_block" style="margin-left: 500rpx;">
+            <text style="font-size: xxx-large; font-weight: bolder; color: white;">{{total_task_finish}}</text>
+            <text style="font-size: small; font-weight: bold; color: white;">任务</text>
+        </view>
+    </view>
+</view>

@@ -7,8 +7,7 @@
     "pages/study/zhongyuan/zhongyuan",
     "pages/study/zhutu/zhutu",
     "pages/study/siyuan/siyuan",
-    "pages/UserCenter/index/UserCenter",
-    "pages/app-auth/index",
+    "pages/UserCenter/index/index",
     "pages/list/index",
     "pages/add/index",
     "pages/file/index",
@@ -36,7 +35,7 @@
         "selectedIconPath": "images/bar/landmark_select.png"
       },
       {
-        "pagePath": "pages/UserCenter/index/UserCenter",
+        "pagePath": "pages/UserCenter/index/index",
         "text": "我的",
         "iconPath": "images/bar/meee.png",
         "selectedIconPath": "images/bar/meee_select.png"

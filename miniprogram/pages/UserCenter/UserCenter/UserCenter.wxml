@@ -1,0 +1,41 @@
+<!--pages/UserCenter/UserCenter.wxml-->
+
+<view class="container">
+    <view class="head">
+        <block wx:if="{{!hasUserInfo}}">
+            <image src="../../../images/login/banner.png" class="banner"></image>
+            <text wx:if="{{canIUseGetUserProfile}}" class="text" style="color: #363636a4;" bindtap="getUserProfile">点此登录</text>
+            <image class="avatar" src="../../../images/login/default_avatar_big.png"></image>      
+        </block>
+        <block wx:else>
+            <image src="../../../images/login/edit.png" bindtap="edit_name" class="edit"></image>
+            <image src="../../../images/login/banner.png" class="banner"></image>
+            <block wx:for="{{text}}" wx:key="idx" wx:item="item">
+                <text class="text" style="letter-spacing: 0.1rpx;">
+                    {{item}}
+                </text>
+            </block>
+            <open-data class="avatar" type="userAvatarUrl"></open-data>
+        </block>
+    </view>
+
+    <modal hidden="{{hiddenmodalput}}" title="姓名修改" confirm-text="提交" cancel-text="取消" bindcancel="cancelInput" bindconfirm="confirmInput" style="z-index: 40;">
+            <input type='text' placeholder="输入新昵称" bindinput="nameInput" maxlength="4" auto-focus />
+    </modal>
+
+    <view wx:if="{{hasUserInfo}}" class="study_data">
+        <image class="data_background" src="../../../images/login/study_data.png"></image>
+        <view class="data_block" style="margin-right: 60%;">
+            <text class="data_number">{{tot_std_hor}}\n</text>
+            <text class="data_unit">小时</text>
+        </view>
+        <view class="data_block">
+            <text class="data_number" style="margin-left: 5%;">{{tot_std_day}}\n</text>
+            <text class="data_unit" style="margin-left: 10%;">天</text>
+        </view>
+        <view class="data_block" style="margin-left: 80%;">
+            <text class="data_number">{{tot_tsk_don}}\n</text>
+            <text class="data_unit">任务</text>
+        </view>
+    </view>
+</view>
