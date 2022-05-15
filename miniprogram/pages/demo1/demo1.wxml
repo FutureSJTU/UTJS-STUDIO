@@ -1,0 +1,24 @@
+//点击查询
+<button type="primary" bindtap="getData2">点击获取数据</button>
+
+查询指令
+<view wx:for="{{dataObj}}">{{item._id}}</view>
+
+-------
+
+<button type="primary" bindtap="addData">插入一条数据</button>
+
+--------
+
+<form bindsubmit="btnSub">
+    <input name="title" placeholder="请输入姓名"> </input>
+    <input name="gender" placeholder="请输入性别"></input>
+    <button type="primary" form-type="submit">提交</button>
+    <button form-type="reset">重置</button>
+</form>
+
+------
+<button type="primary" bindtap="updateData">更新一条记录</button>
+
+------
+<button type="primary"bindtap="delData">删除一条数据</button>
