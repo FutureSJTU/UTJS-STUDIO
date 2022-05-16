@@ -8,14 +8,12 @@ const db = cloud.database()
 const _ = db.command
 
 exports.main = async (event, context) => {
-    var row = event.row;
-    var column = event.column;
+    var num = event.num;
     var place = event.place;
     try {
         
     return await db.collection('self-study').where({
-        row:row,
-        column:column,
+        num:num,
         place:place
     }).remove() 
   } catch(e) {

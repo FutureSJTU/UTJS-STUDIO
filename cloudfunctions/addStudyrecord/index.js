@@ -7,13 +7,12 @@ const db=cloud.database();
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-    var row=event.row;
-    var column = event.column;
+    var num=event.num;
     var place = event.place;
     var iname = event.name;
     //在这里写函数,event接收前段来的数据
-    var num;
-    num = await db.collection("user").where({
+    var inum;
+    inum = await db.collection("user").where({
         name:iname
     }).field({
         demoOrder:true
@@ -21,9 +20,8 @@ exports.main = async (event, context) => {
 
     db.collection("self-study").add({
         data:{
-            user_num:num.data[0].demoOrder,
-            row:row,
-            column:column,
+            user_num:inum.data[0].demoOrder,
+            num:num,
             place:place
         }
     })
