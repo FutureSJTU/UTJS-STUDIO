@@ -20,7 +20,9 @@ App({
       total_come_day: 10,
       total_task_finish: 10,
       //座位位置
-      number:0
+      number:0,
+      //
+      place:"siyuan"
     }
   
   },
