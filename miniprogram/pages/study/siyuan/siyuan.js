@@ -24,6 +24,12 @@ Page({
     showUploadTip: false
   } ,
 
+  //进入自习室
+  onShow: function () {
+    app.globalData.place = "思源湖畔"
+
+  },
+
   //离开自习室
   onUnload: function () {
 
