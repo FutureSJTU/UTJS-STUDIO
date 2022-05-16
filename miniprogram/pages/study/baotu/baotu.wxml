@@ -1,4 +1,3 @@
-<!--pages/study/baotu/baotu.wxml-->
-<text>pages/study/baotu/baotu.wxml</text>
-<image mode="scaleToFill" src="http://m.qpic.cn/psc?/V52DO5y10hISBZ2vHb1Q17XtI74WVMQ0/ruAMsa53pVQWN7FLK88i5rHn2TvvIZ8uDvuYixvYBXwbQcH.XY7apgB0ghktkbdbiix92P1i61sIPZYGq0tUsOtMMJhFs0ytYgsL73.Td*s!/b&bo=uwJgBLsCYAQBByA!&rf=viewer_4"></image>
-<image mode="scaleToFill" src="http://m.qpic.cn/psc?/V52DO5y10hISBZ2vHb1Q17XtI70dIIR8/ruAMsa53pVQWN7FLK88i5vwmvtRc0VPcn12kfy3W*tkxT79kkqP0q9DJZuN9PWIzuWO.GBji0DTDhJz2E1YZalQmynnpFYkPn4cS2Gx32CI!/b&bo=zADAAMwAwAADByI!&rf=viewer_4"></image>
+<view class="page">
+  <seatList seatings="{{seatings}}" hallNumber="{{buildingName}}"/>
+</view>

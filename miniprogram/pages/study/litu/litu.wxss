@@ -1,6 +1,9 @@
-/* pages/study/litu/litu.wxss */
-image
-{
-  width: 400px;
-  height: 700px;
-}
+/**index.wxss**/
+
+page {
+    padding-top: 54rpx;
+    background-color: #f6f6f6;
+    padding-bottom: 60rpx;
+  }
+  
+  
