@@ -18,7 +18,8 @@ Component({
   data: {
     selectedIndex: [],
     openid:String,
-    selectedNum: 0
+    selectedNum: 0,
+    place:"siyuan"
   },
   
   
@@ -29,25 +30,27 @@ Component({
       /**
    * Todo List
    */
-  goTodoList: function(){
-    wx.navigateTo({
-      url: '../../list/index',
-    })
-  },
-
+    goTodoList: function(){
+      wx.navigateTo({
+        url: '../../list/index',
+      })
+    },
+  
+    //选座函数
     selected(e) {
     let index = e.currentTarget.dataset.index;
     let total = 0;
+    let buildingName = getApp().globalData.place;
     app.globalData.number = index;
     console.log('当前位置：',app.globalData.number)
-    this.data.total=0
+    console.log('place：',getApp().globalData.place)
     //调用云函数查询是否有人
     wx.cloud.callFunction({
         name:"isSelected",
         data:{
             num:index,
             
-            place:this.properties.buildingName
+            place:buildingName
         }
     }).then(res=>{
         total=res.result.total
@@ -58,13 +61,18 @@ Component({
         title: '这个位置有人',
       })
       return 0;
-      } else if (this.data.selectedIndex.indexOf(index) != -1) {
+      } 
+
+      //自己是否已经选过这个位置
+      else if (this.data.selectedIndex.indexOf(index) != -1) {
         let selectedIndex = this.remove(this.data.selectedIndex, index);
         let selectedNum = this.data.selectedNum - 1;
         this.setData({
           selectedIndex,
           selectedNum
         })}
+
+       //正常选座
        else if (this.data.selectedNum < 1) {
           let selectedNum = this.data.selectedNum + 1;
           let selectedIndex = this.data.selectedIndex.concat(index);
@@ -80,11 +88,11 @@ Component({
                 name:this.data.openid,
                 num:index,
                 
-                place:this.properties.buildingName
+                place:buildingName
             }
           })
           .then(res=>{
-              console.log(res)
+              console.log('上传成功')
           })
           wx.showToast({
             title: '开始学习',
@@ -93,13 +101,18 @@ Component({
             selectedIndex,
             selectedNum
           })
-        } else {
+          console.log(this.data.selectedIndex)
+        } 
+         
+        //自己已经选过座了
+        else {
           wx.showToast({
             title: '最多选择一个座',
           })
         }
       },
-
+    
+    //取消选座
     remove(arr, ele) {
       var index = arr.indexOf(ele);
       if (index > -1) {
@@ -113,10 +126,10 @@ Component({
 
             num:getApp().globalData.number,
  
-            place:this.properties.buildingName
+            place:getApp().globalData.place
         }
         }).then(res=>{
-            console.log('离开位置：',this.data.buildingName,getApp().globalData.number)
+            console.log('离开位置：',getApp().globalData.place,getApp().globalData.number)
         })
       return arr;
     }
