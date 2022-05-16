@@ -6,12 +6,6 @@
   </view>
   <view class="seatings">
     <view class="seatings_signs">
-      <!-- <view class="signs_normal">
-        <view class="seatNormal"></view> <text>普通区</text> 
-      </view>
-      <view class="signs_excellent">
-        <view class="seatExcellent"></view> <text>优选区</text> 
-      </view> -->
     </view>
     <view class="seatings_visual">
     <movable-area>
@@ -21,10 +15,7 @@
       scale-min="0.3" 
       scale-max="1.5">
     <view class="emptyBox"></view>
-      <!-- <view class="visual_screen">
-        <view class="screen"></view>
-      </view> -->
-    <view class="visual_title">{{buildingName}}</view>
+    <view class="visual_title">test</view>
       <view class="visual_seatings">
       <view class="visual_seating">
       <block wx:for="{{seatings}}" 

@@ -12,8 +12,8 @@ Page({
             name:"addStudyrecord",
             data:{
                 name:"张三",
-                row:1,
-                column:3,
+                num:1,
+                
                 place:"思源湖"
             }
         })
@@ -26,12 +26,14 @@ Page({
         wx.cloud.callFunction({
             name:"isSelected",
             data:{
-                row:1,
-                column:3,
+                num:1,
+                
                 place:"思源湖"
             }
         }).then(res=>{
-            console.log(res)
+            let total=res.result.total
+            console.log(total)
+            
         })
         
     },
@@ -40,8 +42,8 @@ Page({
         wx.cloud.callFunction({
         name:"toLeave",
         data:{
-            row:1,
-            column:3,
+            num:1,
+ 
             place:"思源湖"
         }
         }).then(res=>{

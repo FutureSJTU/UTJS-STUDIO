@@ -1,3 +1,4 @@
+var app = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -16,9 +17,10 @@ Component({
    */
   data: {
     selectedIndex: [],
+    openid:String,
     selectedNum: 0
   },
-
+  
   
   /**
    * 组件的方法列表
@@ -32,19 +34,61 @@ Component({
       url: '../../list/index',
     })
   },
+
     selected(e) {
-      let index = e.currentTarget.dataset.index;
-      if (this.data.selectedIndex.indexOf(index) != -1) {
+    let index = e.currentTarget.dataset.index;
+    let total = 0;
+    app.globalData.number = index;
+    console.log('当前位置：',app.globalData.number)
+    this.data.total=0
+    //调用云函数查询是否有人
+    wx.cloud.callFunction({
+        name:"isSelected",
+        data:{
+            num:index,
+            
+            place:this.properties.buildingName
+        }
+    }).then(res=>{
+        total=res.result.total
+        console.log('当前位置总人数：',total)
+    })
+    //console.log('当前位置总人数：',total)
+      if(total > 0){wx.showToast({
+        title: '这个位置有人',
+      })
+      return 0;
+      } else if (this.data.selectedIndex.indexOf(index) != -1) {
         let selectedIndex = this.remove(this.data.selectedIndex, index);
         let selectedNum = this.data.selectedNum - 1;
         this.setData({
           selectedIndex,
           selectedNum
-        })
-      } else {
-        if (this.data.selectedNum < 1) {
+        })}
+       else if (this.data.selectedNum < 1) {
           let selectedNum = this.data.selectedNum + 1;
           let selectedIndex = this.data.selectedIndex.concat(index);
+          
+          //上传选座数据到数据库
+        getApp().getOpenId().then(res => {
+            console.log('openid', res);
+            this.data.openid=res
+        })
+          wx.cloud.callFunction({
+            name:"addStudyrecord",
+            data:{
+                name:this.data.openid,
+                num:index,
+                
+                place:this.properties.buildingName
+            }
+          })
+          .then(res=>{
+              console.log(res)
+          })
+          wx.showToast({
+            title: '开始学习',
+          })
           this.setData({
             selectedIndex,
             selectedNum
@@ -54,13 +98,26 @@ Component({
             title: '最多选择一个座',
           })
         }
-      }
-    },
+      },
+
     remove(arr, ele) {
       var index = arr.indexOf(ele);
       if (index > -1) {
         arr.splice(index, 1);
       }
+      
+      wx.cloud.callFunction({
+        name:"toLeave",
+
+        data:{
+
+            num:getApp().globalData.number,
+ 
+            place:this.properties.buildingName
+        }
+        }).then(res=>{
+            console.log('离开位置：',this.data.buildingName,getApp().globalData.number)
+        })
       return arr;
     }
   }
