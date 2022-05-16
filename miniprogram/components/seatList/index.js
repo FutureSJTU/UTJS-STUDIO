@@ -92,7 +92,7 @@ Component({
             }
           })
           .then(res=>{
-              console.log('上传成功')
+              console.log("选座：",res)
           })
           wx.showToast({
             title: '开始学习',

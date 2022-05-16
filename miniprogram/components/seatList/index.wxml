@@ -15,7 +15,7 @@
       scale-min="0.3" 
       scale-max="1.5">
     <view class="emptyBox"></view>
-    <view class="visual_title">test</view>
+    <view class="visual_title">{{buildingName}}</view>
       <view class="visual_seatings">
       <view class="visual_seating">
       <block wx:for="{{seatings}}" 

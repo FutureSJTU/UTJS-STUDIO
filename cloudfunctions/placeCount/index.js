@@ -7,7 +7,8 @@ const db=cloud.database();
 exports.main = async (event, context) => {
     return await db.collection("self-study")
         .field({
-            num:true
+            num:true,
+            openid:true
         })
         .orderBy("num","asc").get()
         
