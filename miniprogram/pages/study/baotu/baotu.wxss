@@ -1,18 +1,23 @@
 /* pages/study/baotu/baotu.wxss */
-image
-{
+page {
+  padding-top: 54rpx;
+  background-color: #f6f6f6;
+  padding-bottom: 60rpx;
+}
+
+image {
   width: 400px;
   height: 700px;
 }
 
-.time{
-  height:200rpx;
-  line-height:200rpx;
-  font-size:50rpx;
+.time {
+  height: 200rpx;
+  line-height: 200rpx;
+  font-size: 50rpx;
 }
 
-button{
-  width:150rpx;
+button {
+  width: 150rpx;
   background: rgb(7, 193, 96);
   color: #fff;
   margin-bottom: 8px;

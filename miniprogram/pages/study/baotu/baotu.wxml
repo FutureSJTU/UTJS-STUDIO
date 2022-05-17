@@ -5,3 +5,6 @@
 <button   bindtap='Reset'>停止</button>
 
 <image mode="scaleToFill" src="http://m.qpic.cn/psc?/V52DO5y10hISBZ2vHb1Q17XtI74WVMQ0/ruAMsa53pVQWN7FLK88i5rHn2TvvIZ8uDvuYixvYBXwbQcH.XY7apgB0ghktkbdbiix92P1i61sIPZYGq0tUsOtMMJhFs0ytYgsL73.Td*s!/b&bo=uwJgBLsCYAQBByA!&rf=viewer_4"></image>
+<view class="page">
+  <seatList seatings="{{seatings}}" hallNumber="{{buildingName}}"/>
+</view>

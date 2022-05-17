@@ -1,17 +1,11 @@
 <view class="container">
-  <image src="http://m.qpic.cn/psc?/V52DO5y10hISBZ2vHb1Q17XtI74WVMQ0/45NBuzDIW489QBoVep5mcfgyFp84gHCOxlhs334.GqOJguJ23Tm9rJY6AnT1vp.UQNMKcbPgHhyv66GRf7iN05UIR7M4fqC6q6IrfKxMaVA!/b&bo=uwJgBLsCYAQBFzA!&rf=viewer_4"></image>
+  <image src="https://s3.bmp.ovh/imgs/2022/05/16/dbc36682ceab384e.jpg"></image>
   <wxs src="../../pages/util.wxs" module="tools" />
   <view class="padding flex flex-direction">
-    <button class="cu-btn bg-blue lg" bindtap="goTodoList">代办列表</button>
+    <button style="color:#ffffff"class="cu-btn bg-blue lg" bindtap="goTodoList">待办列表</button>
   </view>
   <view class="seatings">
     <view class="seatings_signs">
-      <!-- <view class="signs_normal">
-        <view class="seatNormal"></view> <text>普通区</text> 
-      </view>
-      <view class="signs_excellent">
-        <view class="seatExcellent"></view> <text>优选区</text> 
-      </view> -->
     </view>
     <view class="seatings_visual">
     <movable-area>
@@ -21,9 +15,6 @@
       scale-min="0.3" 
       scale-max="1.5">
     <view class="emptyBox"></view>
-      <!-- <view class="visual_screen">
-        <view class="screen"></view>
-      </view> -->
     <view class="visual_title">{{buildingName}}</view>
       <view class="visual_seatings">
       <view class="visual_seating">
@@ -42,8 +33,11 @@
             data-index="{{index}}"
             bindtap="selected"></view>
         </view>
-        <view wx:elif="{{item == 3}}"
-          class="seatChosen"></view>
+        <view wx:elif="{{item == 3}}">
+          <view 
+            class="seatChosen"
+            bindtap="chosen"></view>
+        </view>
         <view wx:else>
           <view class="seatNone"></view>
         </view>

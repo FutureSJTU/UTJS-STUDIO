@@ -18,8 +18,13 @@ App({
       userInfo: null,
       total_study_time: 10,
       total_come_day: 10,
-      total_task_finish: 10
+      total_task_finish: 10,
+      //座位位置
+      number:0,
+      //
+      place:"siyuan"
     }
+  
   },
 
   flag: false,

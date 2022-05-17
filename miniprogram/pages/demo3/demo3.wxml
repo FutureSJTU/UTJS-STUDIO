@@ -1,0 +1,8 @@
+<!--pages/demo3/demo3.wxml-->
+<button type="primary" bindtap="addStuRec">添加学习记录</button>
+------------------
+<button type="primary" bindtap="isSelec">是否已选</button>
+------------------
+<button type="primary" bindtap="leave">离开自习室</button>
+
+<button type="primary" bindtap="count">人数查询</button>
