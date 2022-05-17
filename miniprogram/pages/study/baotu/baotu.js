@@ -38,7 +38,7 @@ Page({
     _this.data.timer = setInterval(//定时器  函数赋值给timer  方便clearInterval（）使用
      function () {
     _this.toClock1();        
-    }, 1000);
+    }, 60000);
 
 	_this.setData({
 	    timer:_this.data.timer
