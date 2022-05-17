@@ -1,9 +1,5 @@
 <!--pages/study/baotu/baotu.wxml-->
-<view class="time"> {{timecount}}</view>
-<button   bindtap='start'>开始</button>
-<button   bindtap='stop'>暂停</button>
-<button   bindtap='Reset'>停止</button>
-
+<!-- <view class="timer" zindex="10">专注时长: {{h}}时{{m}}分{{s}}秒</view> -->
 <image mode="scaleToFill" src="http://m.qpic.cn/psc?/V52DO5y10hISBZ2vHb1Q17XtI74WVMQ0/ruAMsa53pVQWN7FLK88i5rHn2TvvIZ8uDvuYixvYBXwbQcH.XY7apgB0ghktkbdbiix92P1i61sIPZYGq0tUsOtMMJhFs0ytYgsL73.Td*s!/b&bo=uwJgBLsCYAQBByA!&rf=viewer_4"></image>
 <view class="page">
   <seatList seatings="{{seatings}}" hallNumber="{{buildingName}}"/>

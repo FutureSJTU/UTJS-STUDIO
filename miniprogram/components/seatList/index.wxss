@@ -121,3 +121,13 @@ movable-view {
   height: 40vw;
   border-right: 2rpx dashed #000;
 } */
+
+.timer {
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  background-color: #f6f6f6;
+  z-index: 2;
+}
