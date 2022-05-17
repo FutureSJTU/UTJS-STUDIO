@@ -1,19 +1,5 @@
 var app = getApp();
 var intt;
-function updateTime() {
-    var studyTime = 3600 * this.data.hour + 60 * this.data.minute + this.data.second;
-
-    wx.cloud.callFunction({
-        name: "updateStudytime",
-        data: {
-            addsdt: studyTime
-        }
-    })
-}
-
-module.exports = {
-    updateTime: updateTime
-}
 
 Component({
     /**
@@ -216,3 +202,18 @@ Component({
         },
     }
 })
+
+function updateTime() {
+    var studyTime = 3600 * this.data.hour + 60 * this.data.minute + this.data.second;
+
+    wx.cloud.callFunction({
+        name: "updateStudytime",
+        data: {
+            addsdt: studyTime
+        }
+    })
+}
+
+module.exports = {
+    updateTime: updateTime
+}

@@ -1,5 +1,4 @@
 // pages/study/baotu/baotu.js
-var intt;
 var app = getApp();
 var seatList = require('../../../components/seatList/index.js');
 
