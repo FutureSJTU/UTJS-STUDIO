@@ -1,9 +1,11 @@
-/**index.wxss**/
-
+/* pages/study/baotu/baotu.wxss */
 page {
     padding-top: 54rpx;
     background-color: #f6f6f6;
     padding-bottom: 60rpx;
-  }
-  
-  
+}
+
+image {
+    width: 400px;
+    height: 700px;
+}

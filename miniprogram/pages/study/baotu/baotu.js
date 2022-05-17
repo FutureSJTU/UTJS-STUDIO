@@ -1,8 +1,9 @@
-//index.js
+// pages/study/baotu/baotu.js
 var app = getApp();
+// var seatList = require('../../../components/seatList/index.js');
 
 const {
-  envList
+    envList
 } = require('../../../envList.js')
 
 Page({
@@ -68,52 +69,52 @@ Page({
         }).then(res=>{
             console.log(res);
             console.log(res.result.data);
-            for (let i=0; i<res.result.data.length; i++){
-                let temp=0;
+            for (let i = 0; i < res.result.data.length; i++) {
+                let temp = 0;
                 let id = 'string'
-                try { 
-                    temp = res.result.data[i].num; 
+                try {
+                    temp = res.result.data[i].num;
                     id = res.result.data[i].user_id;
-                    } catch (error) { 
+                } catch (error) {
                     temp = null; // num为空
                     id = null; // id为空
                 };
-                
+
                 console.log(temp);
-                if(id!= that.data.openid){that.data.seatings[temp]=3}
-                   
-               }
-            
-        }) 
-
-    console.log(that.data.seatings)
-    let seatings = that.data.seatings;   
-    this.setData({
-        seatings
-    })
-  },
-
-  onUnload: function () {
-  //关闭clearInterval定时函数
-     clearInterval(this.data.timer);
-     this.setData({
-       timer: null
-     });
-     console.log('关闭clearInterval定时函数');
-  //离开自习室
-
-    wx.cloud.callFunction({
-        name:"toLeave",
-        data:{
-
-            num:getApp().globalData.number,
- 
-            place:this.data.buildingName
-        }
-        }).then(res=>{
-            console.log('退出自习室，位置为：',this.data.buildingName,getApp().globalData.number)
+                if (id != that.data.openid) {
+                    that.data.seatings[temp] = 3
+                }
+            }
         })
-  },
 
+        console.log(that.data.seatings)
+        let seatings = that.data.seatings;
+        this.setData({
+            seatings
+        })
+    },
+
+    onUnload: function () {
+        //关闭clearInterval定时函数
+        clearInterval(this.data.timer);
+        this.setData({
+            timer: null
+        });
+        console.log('关闭clearInterval定时函数');
+        //离开自习室
+        // seatList.updateTime(); // TODO
+
+        wx.cloud.callFunction({
+            name: "toLeave",
+            data: {
+
+                num: getApp().globalData.number,
+
+                place: this.data.buildingName
+            }
+        }).then(res => {
+            console.log('退出自习室，位置为：', this.data.buildingName, getApp().globalData.number)
+        })
+    },
 
 })

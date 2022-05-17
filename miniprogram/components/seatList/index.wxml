@@ -3,6 +3,7 @@
   <wxs src="../../pages/util.wxs" module="tools" />
   <view class="padding flex flex-direction">
     <button style="color:#ffffff"class="cu-btn bg-blue lg" bindtap="goTodoList">待办列表</button>
+    <button style="color:#ffffff"class="cu-btn bg-blue lg" bindtap="goTodoList">{{timecount}}</button>
   </view>
   <view class="seatings">
     <view class="seatings_signs">
@@ -28,18 +29,21 @@
             bindtap="selected"></view>
         </view>
         <view wx:elif="{{item == 2}}">
-          <view 
+          <view
             class="seatExcellent {{tools.indexOf(selectedIndex, index)?'selected': ''}}" 
             data-index="{{index}}"
             bindtap="selected"></view>
         </view>
-        <view wx:elif="{{item == 3}}">
-          <view 
-            class="seatChosen"
-            bindtap="chosen"></view>
+
+        <view wx:elif="{{item == 3}}"class ="seatChosen" >
+          <!--<image src="/miniprogram/images/study/man2.png" class="mine2" mode="scaleToFill" ></image>
+          -->
         </view>
+
         <view wx:else>
-          <view class="seatNone"></view>
+          <view class="seatNone">
+            <!--<image src="/icon/man.png"  class="mine2"bindtap='gotobaotu' mode='scaleToFill'></image>-->
+          </view>
         </view>
       </block>
     </view>
