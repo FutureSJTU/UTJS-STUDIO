@@ -32,8 +32,9 @@ Page({
     
     const _this = this
     _this.flushed();
-    //定时器  函数赋值给timer  方便clearInterval（）使用
-    _this.data.timer = setInterval(
+    
+    clearInterval(this.data.timer);//关闭此前存在的计时器
+    _this.data.timer = setInterval(//定时器  函数赋值给timer  方便clearInterval（）使用
      function () {
     _this.toClock1();        
     }, 1000);
