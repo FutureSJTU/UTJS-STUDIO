@@ -33,8 +33,11 @@
             data-index="{{index}}"
             bindtap="selected"></view>
         </view>
-        <view wx:elif="{{item == 3}}"
-          class="seatChosen"></view>
+        <view wx:elif="{{item == 3}}">
+          <view 
+            class="seatChosen"
+            bindtap="chosen"></view>
+        </view>
         <view wx:else>
           <view class="seatNone"></view>
         </view>

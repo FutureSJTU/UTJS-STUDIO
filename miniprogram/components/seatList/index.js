@@ -67,6 +67,9 @@ Component({
       else if (this.data.selectedIndex.indexOf(index) != -1) {
         let selectedIndex = this.remove(this.data.selectedIndex, index);
         let selectedNum = this.data.selectedNum - 1;
+        wx.showToast({
+            title: '离开座位',
+          })
         this.setData({
           selectedIndex,
           selectedNum
@@ -132,6 +135,10 @@ Component({
             console.log('离开位置：',getApp().globalData.place,getApp().globalData.number)
         })
       return arr;
-    }
+    },
+
+    chosen(e){wx.showToast({
+        title: '这个位置有人',
+      })}
   }
 })
