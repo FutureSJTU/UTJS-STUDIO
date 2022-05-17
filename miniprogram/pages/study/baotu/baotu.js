@@ -1,11 +1,78 @@
 // pages/study/baotu/baotu.js
+var intt;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    hour: 0,
+    minute: 0,
+    second: 0,
+    millisecond: 0,
+    timecount: '00:00:00',
+    cost: 0,
+    flag: 1,
+    endtime: "",
+  },
 
+  start: function () {
+    var that = this;
+    //停止（暂停）
+    clearInterval(intt);
+    //时间重置
+    that.setData({
+      hour: 0,
+      minute: 0,
+      second: 0,
+      millisecond: 0,
+    })
+    intt = setInterval(function () { that.timer() }, 50);
+  },
+  //暂停
+  stop: function () {
+    clearInterval(intt);
+  },
+  //停止
+  Reset: function () {
+    var that = this
+    clearInterval(intt);
+    that.setData({
+      hour: 0,
+      minute: 0,
+      second: 0,
+      millisecond: 0,
+      timecount: '00:00:00',
+    })
+  },
+  timer: function () {
+    var that = this;
+    console.log(that.data.millisecond)
+    that.setData({
+      millisecond: that.data.millisecond + 5
+    })
+    if (that.data.millisecond >= 100) {
+      that.setData({
+        millisecond: 0,
+        second: that.data.second + 1
+      })
+    }
+    if (that.data.second >= 60) {
+      that.setData({
+        second: 0,
+        minute: that.data.minute + 1
+      })
+    }
+
+    if (that.data.minute >= 60) {
+      that.setData({
+        minute: 0,
+        hour: that.data.hour + 1
+      })
+    }
+    that.setData({
+      timecount: that.data.hour + ":" + that.data.minute + ":" + that.data.second
+    })
   },
 
   /**
