@@ -1,6 +1,6 @@
 <!--pages/UserCenter/UserCenter.wxml-->
 <view wx:if="{{!hasUserInfo}}" class="login">
-    <image src="../../../images/login/background.jpg" class="loginBackground"></image>
+    <image src="https://s3.bmp.ovh/imgs/2022/05/18/d697abdee4773fad.jpg" class="loginBackground"></image>
     <text class="loginGreet"  bindtap="getUserProfile">Hello, \n 点此登录</text>
 </view>
 
@@ -8,7 +8,7 @@
     <view class="head">
         <block>
             <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
-            <image class="banner" src="../../../images/login/banner.jpg"></image>
+            <image class="banner" src="https://s3.bmp.ovh/imgs/2022/05/18/4f7804e06aa52dd3.jpg"></image>
             <text class="greet">Welcome, \n {{userInfo.nickName}}</text>
         </block>
     </view>
