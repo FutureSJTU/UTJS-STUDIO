@@ -4,7 +4,7 @@ SJTU-NIS2328-Software-Engineering course project, SJTUer Online Learning Communi
 
 Usage: scan the WeChat MINA code.
 
-![MINA code](https://s3.bmp.ovh/imgs/2022/05/18/1360189af224d5ad.jpg){:height="50%" width="50%"}
+![MINA code](https://s3.bmp.ovh/imgs/2022/05/18/1360189af224d5ad.jpg)
 
 Developed by Group 8.
 
