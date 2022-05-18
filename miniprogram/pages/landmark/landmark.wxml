@@ -15,37 +15,37 @@
   <view class="padding-sm" bindtap="gotozhutu">
     <view class="bg-gradual-red padding radius text-center shadow-blur">
       <view class="text-lg">图书馆主馆</view>
-      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+      <view class="margin-top-sm text-Abc">共 {{zhutuNum}} 人在学习</view>
     </view>
   </view>
   <view class="padding-sm" bindtap="gotobaotu">
     <view class="bg-gradual-orange padding radius text-center shadow-blur">
       <view class="text-lg">包玉刚图书馆</view>
-      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+      <view class="margin-top-sm text-Abc">共 {{baotuNum}} 人在学习</view>
     </view>
   </view>
   <view class="padding-sm" bindtap="gotolitu">
     <view class="bg-gradual-green padding radius text-center shadow-blur">
       <view class="text-lg">李政道图书馆</view>
-      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+      <view class="margin-top-sm text-Abc">共 {{lituNum}} 人在学习</view>
     </view>
   </view>
   <view class="padding-sm" bindtap="gotozhongyuan">
     <view class="bg-gradual-blue padding radius text-center shadow-blur">
       <view class="text-lg">中院</view>
-      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+      <view class="margin-top-sm text-Abc">共 {{zhongyuanNum}} 人在学习</view>
     </view>
   </view>
   <view class="padding-sm" bindtap="gotodongxia">
     <view class="bg-gradual-purple padding radius text-center shadow-blur">
       <view class="text-lg">东下院</view>
-      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+      <view class="margin-top-sm text-Abc">共 {{dongxiaNum}} 人在学习</view>
     </view>
   </view>
   <view class="padding-sm" bindtap="gotosiyuan">
     <view class="bg-gradual-pink padding radius text-center shadow-blur">
       <view class="text-lg">思源湖畔</view>
-      <view class="margin-top-sm text-Abc">共 xxx 人在学习</view>
+      <view class="margin-top-sm text-Abc">共 {{siyuanNum}} 人在学习</view>
     </view>
   </view>
 </view>

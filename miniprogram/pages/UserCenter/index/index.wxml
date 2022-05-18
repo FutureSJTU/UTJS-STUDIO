@@ -1,0 +1,25 @@
+<!--pages/UserCenter/UserCenter.wxml-->
+<view wx:if="{{!hasUserInfo}}" class="login">
+    <image src="https://s3.bmp.ovh/imgs/2022/05/18/d697abdee4773fad.jpg" class="loginBackground"></image>
+    <text class="loginGreet"  bindtap="getUserProfile">Hello, \n 点此登录</text>
+</view>
+
+<view wx:else class="container">
+    <view class="head">
+        <block>
+            <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+            <image class="banner" src="https://s3.bmp.ovh/imgs/2022/05/18/4f7804e06aa52dd3.jpg"></image>
+            <text class="greet">Welcome, \n {{userInfo.nickName}}</text>
+        </block>
+    </view>
+    <modal hidden="{{hiddenmodalput}}" title="修改昵称" confirm-text="提交" cancel-text="取消" bindcancel="cancelInput" bindconfirm="confirmInput">
+        <input type='text' placeholder="输入新昵称" bindinput="nameInput" auto-focus />
+    </modal>
+    <view class="data">
+        <text class="data_block_1">你累计学习了: \n {{hour}}小时{{minute}}分钟</text>
+        <text class="data_block_2">你累计登录了: \n {{total_come_day}}天</text>
+    </view>
+    <view class="block">
+        <text class="editName" bindtap="editName">点击修改昵称</text>
+    </view>
+</view>
