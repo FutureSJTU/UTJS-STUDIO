@@ -18,11 +18,11 @@ image{
 
 movable-area {
   
-  height: 51.8vw;
+  height: 50vw;
   width: 90%;
 }
 movable-view {
-  height: 51.8vw;
+  height: 50vw;
   width: 100%;
 }
 
@@ -31,9 +31,9 @@ movable-view {
   padding: 0;
 }
 .seatNormal, .seatExcellent, .seatNone, .seatChosen {
-  height: 9.5vw;
-  width: 8vw;
-  margin: 0vw 2.3vw 3.3vw 2.3vw;
+  height: 9.6vw;
+  width: 8.1vw;
+  margin: 0.2vw 1.9vw 3.2vw 2.3vw;
   /* border-radius: 100rpx; */
   box-sizing: border-box;
 }
@@ -118,7 +118,7 @@ movable-view {
   justify-content: center;
   width: 100%;
   height: 43vw;
-  margin-left:5rpx; 
+  margin-left:10rpx; 
 }
 .visual_seating {
   width: 90%;
