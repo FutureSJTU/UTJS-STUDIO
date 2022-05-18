@@ -18,11 +18,11 @@ image{
 
 movable-area {
   
-  height: 51.5vw;
+  height: 51.8vw;
   width: 90%;
 }
 movable-view {
-  height: 51.5vw;
+  height: 51.8vw;
   width: 100%;
 }
 
