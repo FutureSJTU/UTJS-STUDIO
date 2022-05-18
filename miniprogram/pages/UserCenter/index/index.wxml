@@ -1,32 +1,25 @@
 <!--pages/UserCenter/UserCenter.wxml-->
-<view class="container">
+<view wx:if="{{!hasUserInfo}}" class="login">
+    <image src="../../../images/login/background.jpg" class="loginBackground"></image>
+    <text class="loginGreet"  bindtap="getUserProfile">Hello, \n 点此登录</text>
+</view>
+
+<view wx:else class="container">
     <view class="head">
-        <block wx:if="{{!hasUserInfo}}">
-            <image class="avatar" src="../../../images/login/default_avatar_big.png"></image>
-            <image class="banner" src="../../../images/login/banner.png"></image>
-            <text class="greet" bindtap="getUserProfile">点此登录</text>
-        </block>
-        <block wx:else>
+        <block>
             <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
-            <image class="banner" src="../../../images/login/banner.png"></image>
-            <text class="greet" bindtap="editName">你好，{{userInfo.nickName}}</text>
+            <image class="banner" src="../../../images/login/banner.jpg"></image>
+            <text class="greet">Welcome, \n {{userInfo.nickName}}</text>
         </block>
     </view>
     <modal hidden="{{hiddenmodalput}}" title="修改昵称" confirm-text="提交" cancel-text="取消" bindcancel="cancelInput" bindconfirm="confirmInput">
         <input type='text' placeholder="输入新昵称" bindinput="nameInput" auto-focus />
     </modal>
-    <view class="data" wx:if="{{hasUserInfo}}">
-        <view class="data_block" style="margin-left: 10rpx;">
-            <text style="font-size: xxx-large; font-weight: bolder; color: white;">{{total_study_time}}</text>
-            <text style="font-size: small; font-weight: bold; color: white;">小时</text>
-        </view>
-        <view class="data_block" style="margin-left: 260rpx;">
-            <text style="font-size: xxx-large; font-weight: bolder; color: white;">{{total_come_day}}</text>
-            <text style="font-size: small; font-weight: bold; color: white;">签到</text>
-        </view>
-        <view class="data_block" style="margin-left: 500rpx;">
-            <text style="font-size: xxx-large; font-weight: bolder; color: white;">{{total_task_finish}}</text>
-            <text style="font-size: small; font-weight: bold; color: white;">任务</text>
-        </view>
+    <view class="data">
+        <text class="data_block_1">你累计学习了: \n {{hour}}小时{{minute}}分钟</text>
+        <text class="data_block_2">你累计登录了: \n {{total_come_day}}天</text>
+    </view>
+    <view class="block">
+        <text class="editName" bindtap="editName">点击修改昵称</text>
     </view>
 </view>

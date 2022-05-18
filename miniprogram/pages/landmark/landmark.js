@@ -1,4 +1,6 @@
 // pages/landmark/landmark.js
+var app = getApp();
+
 Page({
 
     /**
@@ -27,34 +29,70 @@ Page({
         }],
     },
     gotozhutu: function () {
-        wx.navigateTo({
-            url: '/pages/study/zhutu/zhutu',
-        })
+        if (app.globalData.hasuserinfo) {
+            wx.navigateTo({
+                url: '/pages/study/zhutu/zhutu',
+            })
+        } else {
+            wx.showToast({
+                title: '请先登录',
+            })
+        }
     },
     gotobaotu: function () {
-        wx.navigateTo({
-            url: '/pages/study/baotu/baotu',
-        })
+        if (app.globalData.hasuserinfo) {
+            wx.navigateTo({
+                url: '/pages/study/baotu/baotu',
+            })
+        } else {
+            wx.showToast({
+                title: '请先登录',
+            })
+        }
     },
     gotolitu: function () {
-        wx.navigateTo({
-            url: '/pages/study/litu/litu',
-        })
+        if (app.globalData.hasuserinfo) {
+            wx.navigateTo({
+                url: '/pages/study/litu/litu',
+            })
+        } else {
+            wx.showToast({
+                title: '请先登录',
+            })
+        }
     },
     gotozhongyuan: function () {
-        wx.navigateTo({
-            url: '/pages/study/zhongyuan/zhongyuan',
-        })
+        if (app.globalData.hasuserinfo) {
+            wx.navigateTo({
+                url: '/pages/study/zhongyuan/zhongyuan',
+            })
+        } else {
+            wx.showToast({
+                title: '请先登录',
+            })
+        }
     },
     gotodongxia: function () {
-        wx.navigateTo({
-            url: '/pages/study/dongxia/dongxia',
-        })
+        if (app.globalData.hasuserinfo) {
+            wx.navigateTo({
+                url: '/pages/study/dongxia/dongxia',
+            })
+        } else {
+            wx.showToast({
+                title: '请先登录',
+            })
+        }
     },
     gotosiyuan: function () {
-        wx.navigateTo({
-            url: '/pages/study/siyuan/siyuan',
-        })
+        if (app.globalData.hasuserinfo) {
+            wx.navigateTo({
+                url: '/pages/study/siyuan/siyuan',
+            })
+        } else {
+            wx.showToast({
+                title: '请先登录',
+            })
+        }
     },
 
 
