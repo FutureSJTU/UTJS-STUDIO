@@ -1,6 +1,6 @@
 // pages/study/baotu/baotu.js
 var app = getApp();
-// var seatList = require('../../../components/seatList/index.js');
+var seatList = require('../../../components/seatList/index.js');
 
 const {
     envList
@@ -97,7 +97,7 @@ Page({
         });
         console.log('关闭clearInterval定时函数');
         //离开自习室
-        // seatList.updateTime(); // TODO
+        seatList.updateTime(); // TODO
 
         wx.cloud.callFunction({
             name: "toLeave",
