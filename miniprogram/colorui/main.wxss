@@ -51,13 +51,13 @@ page {
 	--gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
 	--gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
 	--gradualBlue: linear-gradient(45deg, #0081ff, #1cbbb4);*/
-	
-	--gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
-	--gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
-	--gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
-	--gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
-	--gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
-	--gradualBlue: linear-gradient(45deg, #0081ff, #1cbbb4);
+
+	--gradualRed: linear-gradient(45deg,#c38e9e,#d9b8f1);
+	--gradualOrange: linear-gradient(45deg,#ae716e,  #cb8e85);
+	--gradualGreen: linear-gradient(45deg, #B993D6, #8CA6DB);
+	--gradualPurple: linear-gradient(45deg,#acb6e5, #86fde8);
+	--gradualPink: linear-gradient(45deg, #ee9ca7, #ffdde1);
+	--gradualBlue: linear-gradient(45deg, #D66D75, #E29587);
 	/* 阴影透明色 */
 	--ShadowSize: 6rpx 6rpx 8rpx;
 	--redShadow: rgba(204, 69, 59, 0.2);
