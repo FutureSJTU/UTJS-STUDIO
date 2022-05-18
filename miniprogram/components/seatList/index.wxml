@@ -11,7 +11,7 @@
     <view class="seatings_visual">
     <movable-area>
     <movable-view 
-      direction="none" 
+      direction="vertical" 
       scale="{{false}}"
       scale-min="0.3" 
       scale-max="1.5">

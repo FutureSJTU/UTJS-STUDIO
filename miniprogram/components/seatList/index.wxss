@@ -18,11 +18,11 @@ image{
 
 movable-area {
   
-  height: 50vw;
+  height: 51.5vw;
   width: 90%;
 }
 movable-view {
-  height: 50vw;
+  height: 51.5vw;
   width: 100%;
 }
 
@@ -33,7 +33,7 @@ movable-view {
 .seatNormal, .seatExcellent, .seatNone, .seatChosen {
   height: 9.5vw;
   width: 8vw;
-  margin: 1.2vw 2.3vw 2.0vw 2.3vw;
+  margin: 0vw 2.3vw 3.3vw 2.3vw;
   /* border-radius: 100rpx; */
   box-sizing: border-box;
 }
