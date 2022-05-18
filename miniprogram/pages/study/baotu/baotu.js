@@ -32,7 +32,7 @@ Page({
 
         const _this = this
         _this.flushed();
-
+        
         clearInterval(this.data.timer);//关闭此前存在的计时器
         _this.data.timer = setInterval(//定时器  函数赋值给timer  方便clearInterval（）使用
             function () {
@@ -79,18 +79,22 @@ Page({
                     id = null; // id为空
                 };
 
-                console.log(temp);
+                console.log("开始修改");
                 if (id != that.data.openid) {
                     that.data.seatings[temp] = 3
                 }
             }
         })
-
-        console.log(that.data.seatings)
-        let seatings = that.data.seatings;
-        this.setData({
-            seatings
-        })
+        
+        setTimeout(()=>
+        {
+            console.log(that.data.seatings)
+            let seatings = that.data.seatings;
+            this.setData({
+                seatings
+            })
+        }, 400)
+        
     },
 
     onUnload: function () {

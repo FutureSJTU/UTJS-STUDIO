@@ -25,6 +25,10 @@ Page({
         this.data.curdate[2] = date.getDate();
     },
 
+    onPullDownRefresh:function(){
+        this.onShow();
+    },
+
     onLoad: function(){
         if(wx.getUserProfile){
         this.setData({
@@ -174,5 +178,7 @@ Page({
                 hasUserInfo: true
             })
         }
+
+        wx.stopPullDownRefresh()
     }
 })
