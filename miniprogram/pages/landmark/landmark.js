@@ -29,7 +29,7 @@ Page({
         }],
     },
     gotozhutu: function () {
-        if (app.globalData.hasuserinfo) {
+        if (app.globalData.hasuserInfo) {
             wx.navigateTo({
                 url: '/pages/study/zhutu/zhutu',
             })
@@ -40,7 +40,7 @@ Page({
         }
     },
     gotobaotu: function () {
-        if (app.globalData.hasuserinfo) {
+        if (app.globalData.hasuserInfo) {
             wx.navigateTo({
                 url: '/pages/study/baotu/baotu',
             })
@@ -51,7 +51,7 @@ Page({
         }
     },
     gotolitu: function () {
-        if (app.globalData.hasuserinfo) {
+        if (app.globalData.hasuserInfo) {
             wx.navigateTo({
                 url: '/pages/study/litu/litu',
             })
@@ -62,7 +62,7 @@ Page({
         }
     },
     gotozhongyuan: function () {
-        if (app.globalData.hasuserinfo) {
+        if (app.globalData.hasuserInfo) {
             wx.navigateTo({
                 url: '/pages/study/zhongyuan/zhongyuan',
             })
@@ -73,7 +73,7 @@ Page({
         }
     },
     gotodongxia: function () {
-        if (app.globalData.hasuserinfo) {
+        if (app.globalData.hasuserInfo) {
             wx.navigateTo({
                 url: '/pages/study/dongxia/dongxia',
             })
@@ -84,7 +84,7 @@ Page({
         }
     },
     gotosiyuan: function () {
-        if (app.globalData.hasuserinfo) {
+        if (app.globalData.hasuserInfo) {
             wx.navigateTo({
                 url: '/pages/study/siyuan/siyuan',
             })
