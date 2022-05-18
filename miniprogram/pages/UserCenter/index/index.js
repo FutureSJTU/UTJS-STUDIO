@@ -6,7 +6,7 @@ Page({
 
     data: {
         userInfo: null,
-        hasUserInfo: false,
+        hasuserInfo: false,
         hasAccount: false,
         canIUseGetUserProfile: false,
         hour: 0,
@@ -48,7 +48,7 @@ Page({
                             name: that.data.userInfo.nickName,
                             gender: that.data.userInfo.gender,
                             date: that.data.curdate,
-                            allday: 0
+                            allday: 1
                         }
                     }).then(res=>{
                         console.log("create an account")
@@ -168,6 +168,7 @@ Page({
 
         if(app.globalData.userInfo != null){
             console.log("update the account information")
+            app.globalData.hasuserInfo = true;
             that.setData({
                 userInfo:app.globalData.userInfo,
                 hasUserInfo: true

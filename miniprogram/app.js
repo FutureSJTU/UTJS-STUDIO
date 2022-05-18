@@ -16,6 +16,7 @@ App({
       fileLimit: 2,
       // users info
       userInfo: null,
+      hasuserInfo: false,
       total_study_time: 0,
       total_come_day: 0,
       //座位位置
