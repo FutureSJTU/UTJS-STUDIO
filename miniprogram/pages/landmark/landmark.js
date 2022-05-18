@@ -63,7 +63,73 @@ Page({
      */
     onLoad: function (options) {
         this.towerSwiper('swiperList');
-        
+        // 显示地标人数
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "主图"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                zhutuNum: res.result.total
+            })
+        })
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "东下"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                dongxiaNum: res.result.total
+            })
+        })
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "思源湖"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                siyuanNum: res.result.total
+            })
+        })
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "包图"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                baotuNum: res.result.total
+            })
+        })
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "李图"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                lituNum: res.result.total
+            })
+        })
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "中院"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                zhongyuanNum: res.result.total
+            })
+        })
     },
 
     DotStyle(e) {
@@ -164,7 +230,73 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-
+        // 显示地标人数
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "主图"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                zhutuNum: res.result.total
+            })
+        })
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "东下"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                dongxiaNum: res.result.total
+            })
+        })
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "思源湖"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                siyuanNum: res.result.total
+            })
+        })
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "包图"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                baotuNum: res.result.total
+            })
+        })
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "李图"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                lituNum: res.result.total
+            })
+        })
+        wx.cloud.callFunction({
+            name: "sscount",
+            data: {
+                place: "中院"
+            }
+        }).then(res => {
+            // console.log(res.result.total);
+            this.setData({
+                zhongyuanNum: res.result.total
+            })
+        })
     },
 
     /**

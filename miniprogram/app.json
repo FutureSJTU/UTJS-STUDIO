@@ -19,7 +19,7 @@
         "pages/demo1/demo1"
     ],
     "window": {
-        "backgroundTextStyle": "light",
+        "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "UTJS Studio",
         "navigationBarTextStyle": "black",
