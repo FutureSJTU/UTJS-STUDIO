@@ -118,6 +118,7 @@ movable-view {
   justify-content: center;
   width: 100%;
   height: 43vw;
+  margin-left:5rpx; 
 }
 .visual_seating {
   width: 90%;
