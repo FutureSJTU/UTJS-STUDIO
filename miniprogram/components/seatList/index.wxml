@@ -11,8 +11,8 @@
     <view class="seatings_visual">
     <movable-area>
     <movable-view 
-      direction="all" 
-      scale="{{true}}"
+      direction="none" 
+      scale="{{false}}"
       scale-min="0.3" 
       scale-max="1.5">
     <view class="emptyBox"></view>
