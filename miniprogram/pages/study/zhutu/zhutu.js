@@ -86,6 +86,7 @@ Page({
 
         })
 
+        for(let i =0;i<5;i++){
         setTimeout(()=>
         {
             console.log(that.data.seatings)
@@ -93,7 +94,7 @@ Page({
             this.setData({
                 seatings
             })
-        }, 400)
+        }, 400)}
     },
 
     onUnload: function () {
