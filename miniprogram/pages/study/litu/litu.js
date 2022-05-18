@@ -55,6 +55,7 @@ Page({
     //刷新函数
     flushed() {
         var that = this;
+        that.data.seatings = that.data.defaultst;
         getApp().getOpenId().then(res => {
             console.log('openid', res);
             this.data.openid = res

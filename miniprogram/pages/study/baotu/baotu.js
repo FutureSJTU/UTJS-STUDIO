@@ -20,6 +20,17 @@ Page({
             0, 1, 1, 0, 1, 1
 
         ],
+        defaultst:[0, 1, 1, 0, 1, 1, 0,
+            0, 0, 0, 0, 0,
+            0, 1, 1, 0, 1, 1
+            , 0, 0, 0, 0, 0, 0,
+            0, 1, 1, 0, 1, 1
+            , 0, 0, 0, 0, 0, 0,
+            0, 1, 1, 0, 1, 1, 0
+            , 0, 0, 0, 0, 0,
+            0, 1, 1, 0, 1, 1
+
+        ],
         buildingName: "包图",
         showUploadTip: false,
         timer: null,
@@ -55,6 +66,7 @@ Page({
     //刷新函数
     flushed() {
         var that = this;
+        that.data.seatings = that.data.defaultst;
         getApp().getOpenId().then(res => {
             console.log('openid', res);
             this.data.openid = res
