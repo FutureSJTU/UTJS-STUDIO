@@ -1,6 +1,5 @@
 {
     "pages": [
-        
         "pages/landmark/landmark",
         "pages/study/baotu/baotu",
         "pages/study/dongxia/dongxia",
@@ -13,10 +12,7 @@
         "pages/add/index",
         "pages/file/index",
         "pages/edit/index",
-        "pages/detail/index",
-        "pages/demo3/demo3",
-        "pages/demo2/demo2",
-        "pages/demo1/demo1"
+        "pages/detail/index"
     ],
     "window": {
         "backgroundTextStyle": "dark",

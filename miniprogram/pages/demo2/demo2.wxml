@@ -1,4 +1,0 @@
-<!--pages/demo2/demo2.wxml-->
-<button type="primary" bindtap="btnNum">获取记录个数</button>
-----------
-<button type="primary" bindtap="condGetdata">条件查询</button>
