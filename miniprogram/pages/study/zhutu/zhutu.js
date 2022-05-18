@@ -1,75 +1,123 @@
-// pages/study/zhutu/zhutu.js
+//index.js
+var app = getApp();
+
+const {
+    envList
+} = require('../../../envList.js')
+
 Page({
+    data: {
+        isPositionPermited: true,
+        pics: ["a", "b"],
+        seatings: [0, 1, 1, 0, 1, 1, 0,
+            0, 0, 0, 0, 0,
+            0, 1, 1, 0, 1, 1
+            , 0, 0, 0, 0, 0, 0,
+            0, 1, 1, 0, 1, 1
+            , 0, 0, 0, 0, 0, 0,
+            0, 1, 1, 0, 1, 1, 0
+            , 0, 0, 0, 0, 0,
+            0, 1, 1, 0, 1, 1
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+        ],
+        buildingName: "主图",
+        showUploadTip: false,
+        timer: null,
+        openid: String
+    },
 
-  },
+    //进入自习室
+    onShow: function () {
+        app.globalData.place = this.data.buildingName
 
-  /**
-   * Todo List
-   */
-  goTodoList: function(){
-    wx.navigateTo({
-      url: '../../list/index',
-    })
-  },
+        const _this = this
+        _this.flushed();
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+        clearInterval(this.data.timer);//关闭此前存在的计时器
+        _this.data.timer = setInterval(//定时器  函数赋值给timer  方便clearInterval（）使用
+            function () {
+                _this.toClock1();
+            }, 60000);
 
-  },
+        _this.setData({
+            timer: _this.data.timer
+        });
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+    },
 
-  },
+    //计时循环
+    toClock1() {
+        var that = this;
+        console.log('计时开始');
+        that.flushed();
+    },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+    //刷新函数
+    flushed() {
+        var that = this;
+        getApp().getOpenId().then(res => {
+            console.log('openid', res);
+            this.data.openid = res
+        })
 
-  },
+        wx.cloud.callFunction({
+            name: "placeCount",
+            data: {
+                place: this.data.buildingName
+            }
+        }).then(res => {
+            console.log(res);
+            console.log(res.result.data);
+            for (let i = 0; i < res.result.data.length; i++) {
+                let temp = 0;
+                let id = 'string'
+                try {
+                    temp = res.result.data[i].num;
+                    id = res.result.data[i].user_id;
+                } catch (error) {
+                    temp = null; // num为空
+                    id = null; // id为空
+                };
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+                console.log(temp);
+                if (id != that.data.openid) { that.data.seatings[temp] = 3 }
 
-  },
+            }
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+        })
 
-  },
+        console.log(that.data.seatings)
+        let seatings = that.data.seatings;
+        this.setData({
+            seatings
+        })
+    },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+    onUnload: function () {
+        //关闭clearInterval定时函数
+        clearInterval(this.data.timer);
+        this.setData({
+            timer: null
+        });
+        console.log('关闭clearInterval定时函数');
 
-  },
+        // 离开自习室时云端同步学习时长
+        this.seat = this.selectComponent('#seat');
+        this.seat.updateTime();
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
+        //离开自习室
+        wx.cloud.callFunction({
+            name: "toLeave",
+            data: {
 
-  },
+                num: getApp().globalData.number,
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+                place: this.data.buildingName
+            }
+        }).then(res => {
+            console.log('退出自习室，位置为：', this.data.buildingName, getApp().globalData.number)
+        })
+    },
 
-  }
+
 })

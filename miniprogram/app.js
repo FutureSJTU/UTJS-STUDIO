@@ -16,8 +16,15 @@ App({
       fileLimit: 2,
       // users info
       userInfo: null,
-      total_study_time: 10
+      hasuserInfo: false,
+      total_study_time: 0,
+      total_come_day: 0,
+      //座位位置
+      number:0,
+      //
+      place:"siyuan"
     }
+  
   },
 
   flag: false,

@@ -1,0 +1,56 @@
+<view class="container">
+  <image src="https://s3.bmp.ovh/imgs/2022/05/16/dbc36682ceab384e.jpg"></image>
+  <wxs src="../../pages/util.wxs" module="tools" />
+  <view class="padding flex flex-direction">
+    <button style="color:#ffffff" class="cu-btn bg-blue lg" bindtap="goTodoList">待办列表</button>
+    <button style="color:#ffffff"class="cu-btn bg-blue lg" bindtap="goTodoList">{{timecount}}</button>
+  </view>
+  <view class="seatings">
+    <view class="seatings_signs">
+    </view>
+    <view class="seatings_visual">
+    <movable-area>
+    <movable-view 
+      direction="all" 
+      scale="{{true}}"
+      scale-min="0.3" 
+      scale-max="1.5">
+    <view class="emptyBox"></view>
+    <view class="visual_title">{{buildingName}}</view>
+      <view class="visual_seatings">
+      <view class="visual_seating">
+      <block wx:for="{{seatings}}" 
+        wx:key="Index"
+        data-index="index">
+        <view wx:if="{{item == 1}}">
+          <view 
+          class="seatNormal {{tools.indexOf(selectedIndex, index)?'selected': ''}}" 
+            data-index="{{index}}"
+            bindtap="selected"></view>
+        </view>
+        <view wx:elif="{{item == 2}}">
+          <view
+            class="seatExcellent {{tools.indexOf(selectedIndex, index)?'selected': ''}}" 
+            data-index="{{index}}"
+            bindtap="selected"></view>
+        </view>
+
+        <view wx:elif="{{item == 3}}"class ="seatChosen" >
+          <!--<image src="/miniprogram/images/study/man2.png" class="mine2" mode="scaleToFill" ></image>
+          -->
+        </view>
+
+        <view wx:else>
+          <view class="seatNone">
+            <!--<image src="/icon/man.png"  class="mine2"bindtap='gotobaotu' mode='scaleToFill'></image>-->
+          </view>
+        </view>
+      </block>
+    </view>
+      </view>
+      </movable-view>
+      </movable-area>
+      </view>
+    </view>
+</view>
+
