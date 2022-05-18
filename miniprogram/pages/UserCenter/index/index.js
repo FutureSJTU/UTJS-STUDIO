@@ -9,6 +9,8 @@ Page({
         hasUserInfo: false,
         hasAccount: false,
         canIUseGetUserProfile: false,
+        hour: 0,
+        minute: 0,
         total_study_time: 0,
         total_come_day: 0,
         curdate: [0,0,0],
@@ -154,7 +156,9 @@ Page({
                 app.globalData.total_study_time = res.result.data[0].studytime
                 that.setData({
                     total_study_time: app.globalData.total_study_time,
-                    hasAccount: true
+                    hasAccount: true,
+                    hour: parseInt((that.data.total_study_time/3600)),
+                    minute: parseInt(((that.data.total_study_time/60)%60))
                 })
                 console.log("update the study time")
             }else{
@@ -166,9 +170,8 @@ Page({
             console.log("update the account information")
             that.setData({
                 userInfo:app.globalData.userInfo,
-                hasUserInfo:true
+                hasUserInfo: true
             })
         }
-
     }
 })

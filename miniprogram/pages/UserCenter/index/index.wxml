@@ -16,7 +16,7 @@
         <input type='text' placeholder="输入新昵称" bindinput="nameInput" auto-focus />
     </modal>
     <view class="data">
-        <text class="data_block_1">你累计学习了: \n {{total_study_time/3600}}小时{{(total_study_time/60)%60}}分钟</text>
+        <text class="data_block_1">你累计学习了: \n {{hour}}小时{{minute}}分钟</text>
         <text class="data_block_2">你累计签到了: \n {{total_come_day}}次</text>
     </view>
     <view class="block">
