@@ -86,11 +86,14 @@ Page({
 
         })
 
-        console.log(that.data.seatings)
-        let seatings = that.data.seatings;
-        this.setData({
-            seatings
-        })
+        setTimeout(()=>
+        {
+            console.log(that.data.seatings)
+            let seatings = that.data.seatings;
+            this.setData({
+                seatings
+            })
+        }, 400)
     },
 
     onUnload: function () {
