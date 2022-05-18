@@ -200,20 +200,31 @@ Component({
                 title: '这个位置有人',
             })
         },
+
+        updateTime: function () {
+            var studyTime = 3600 * this.data.hour + 60 * this.data.minute + this.data.second;
+            wx.cloud.callFunction({
+                name: "updateStudytime",
+                data: {
+                    addsdt: studyTime
+                }
+            })
+            console.log('云端同步增加学习时间: ' + studyTime);
+        }
     }
 })
 
-function updateTime() {
-    var studyTime = 3600 * this.data.hour + 60 * this.data.minute + this.data.second;
+// function updateTime() {
+//     var studyTime = 3600 * this.data.hour + 60 * this.data.minute + this.data.second;
 
-    wx.cloud.callFunction({
-        name: "updateStudytime",
-        data: {
-            addsdt: studyTime
-        }
-    })
-}
+//     wx.cloud.callFunction({
+//         name: "updateStudytime",
+//         data: {
+//             addsdt: studyTime
+//         }
+//     })
+// }
 
-module.exports = {
-    updateTime: updateTime
-}
+// module.exports = {
+//     updateTime: updateTime
+// }
