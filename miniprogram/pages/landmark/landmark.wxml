@@ -38,13 +38,13 @@
   </view>
   <view class="padding-sm" bindtap="gotodongxia">
     <view class="bg-gradual-purple padding radius text-center shadow-blur">
-      <view class="text-lg">东下院</view>
+      <view class="text-lg">东中院</view>
       <view class="margin-top-sm text-Abc">共 {{dongxiaNum}} 人在学习</view>
     </view>
   </view>
   <view class="padding-sm" bindtap="gotosiyuan">
     <view class="bg-gradual-pink padding radius text-center shadow-blur">
-      <view class="text-lg">思源湖畔</view>
+      <view class="text-lg">东下院</view>
       <view class="margin-top-sm text-Abc">共 {{siyuanNum}} 人在学习</view>
     </view>
   </view>
