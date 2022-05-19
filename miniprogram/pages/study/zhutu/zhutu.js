@@ -98,7 +98,6 @@ Page({
 
         })
 
-        for(let i =0;i<10;i++){
         setTimeout(()=>
         {
             
@@ -106,7 +105,17 @@ Page({
             this.setData({
                 seatings
             })
-        }, 400)}
+        }, 400)
+
+        for(let i =0;i<20;i++){
+        setTimeout(()=>
+        {
+            
+            let seatings = that.data.seatings;
+            this.setData({
+                seatings
+            })
+        }, 1000)}
         console.log(that.data.seatings)
     },
 

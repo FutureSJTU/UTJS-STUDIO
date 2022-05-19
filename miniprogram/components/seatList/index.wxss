@@ -17,12 +17,12 @@ image{
 }
 
 movable-area {
-  /*height: 50vw;*/
+  
   height: 50vw;
   width: 90%;
 }
 movable-view {
-  height: 60vw;
+  height: 50vw;
   width: 100%;
 }
 
@@ -31,10 +31,10 @@ movable-view {
   padding: 0;
 }
 .seatNormal, .seatExcellent, .seatNone, .seatChosen {
-  height: 8vw;
-  width: 8vw;
-  margin: 2.3vw;
-  border-radius: 100rpx;
+  height: 9.6vw;
+  width: 8.1vw;
+  margin: 0.2vw 1.9vw 3.2vw 2.3vw;
+  /* border-radius: 100rpx; */
   box-sizing: border-box;
 }
 .seatNormal {
@@ -46,14 +46,16 @@ movable-view {
   background-color: rgba(0,0,0,0);
  /* width: 13%;
   height: 18%;*/
-  background-image: url(https://s3.bmp.ovh/imgs/2022/05/17/6445fd1c78152731.png);
+  background-image: url(https://s3.bmp.ovh/imgs/2022/05/19/81ad0c645660e830.png);
+  background-size: 100% 100%;
 }
 .selected {
   border: rgba(0,0,0,0);/*1rpx solid red;*/
   background-color: rgba(0,0,0,0);
  /* width: 13%;
   height: 18%;*/
-  background-image: url(https://s3.bmp.ovh/imgs/2022/05/17/6445fd1c78152731.png);
+  background-image: url(https://s3.bmp.ovh/imgs/2022/05/19/81ad0c645660e830.png);
+  background-size: 100% 100%;
   /*border: 1rpx solid #05ca90;
   background-color: #05ca90;*/
 }
@@ -116,6 +118,7 @@ movable-view {
   justify-content: center;
   width: 100%;
   height: 43vw;
+  margin-left:10rpx; 
 }
 .visual_seating {
   width: 90%;

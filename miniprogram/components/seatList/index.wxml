@@ -1,5 +1,5 @@
 <view class="container">
-  <image src="https://s3.bmp.ovh/imgs/2022/05/18/40d4f0f19defca86.jpg"></image>
+  <image src="https://s3.bmp.ovh/imgs/2022/05/19/ed5fb675d9db7005.png"></image>
   <wxs src="../../pages/util.wxs" module="tools" />
   <view class="padding flex flex-direction">
     <button style="color:#ffffff" class="cu-btn bg-blue lg" bindtap="goTodoList">待办列表</button>
@@ -11,8 +11,8 @@
     <view class="seatings_visual">
     <movable-area>
     <movable-view 
-      direction="all" 
-      scale="{{true}}"
+      direction="vertical" 
+      scale="{{false}}"
       scale-min="0.3" 
       scale-max="1.5">
     <view class="emptyBox"></view>
