@@ -1,7 +1,7 @@
 <!--pages/UserCenter/UserCenter.wxml-->
 <view wx:if="{{!hasUserInfo}}" class="login">
     <image src="https://s3.bmp.ovh/imgs/2022/05/18/d697abdee4773fad.jpg" class="loginBackground"></image>
-    <text class="loginGreet"  bindtap="getUserProfile">Hello, \n 点此登录</text>
+    <text class="loginGreet"  bindtap="getUserProfile">   Hello， \n 点此登录</text>
 </view>
 
 <view wx:else class="container">
