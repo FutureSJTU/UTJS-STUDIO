@@ -91,8 +91,8 @@ Page({
                             })
                         }
                     })
-                    console.log("already have an account")
-                    /*wx.cloud.callFunction({
+                    /*console.log("already have an account")
+                    wx.cloud.callFunction({
                         name:"delUser"
                     }).then(res=>{
                         console.log("delete")
