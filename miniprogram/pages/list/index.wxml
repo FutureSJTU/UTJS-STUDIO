@@ -3,7 +3,7 @@
 <view class="container empty" wx:if="{{todos.length === 0}}">
   <image class="background" src="../../images/list/background.png" mode="aspectFit" />
   <view class="title">暂无待办</view>
-  <view class="subtitle">有想法？赶紧记下来吧！</view>
+  <!-- <view class="subtitle"></view> -->
   <footer></footer>
 </view>
 
