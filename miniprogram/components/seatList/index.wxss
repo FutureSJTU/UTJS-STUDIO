@@ -32,8 +32,8 @@ movable-view {
 }
 .seatNormal, .seatExcellent, .seatNone, .seatChosen {
   height: 11vw;
-  width: 9vw;
-  margin: 0vw 1.45vw 2vw 1.85vw;
+  width: 9.3vw;
+  margin: 0vw 1.3vw 2vw 1.7vw;
   /* border-radius: 100rpx; */
   box-sizing: border-box;
 }
