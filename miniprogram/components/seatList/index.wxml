@@ -3,7 +3,7 @@
   <wxs src="../../pages/util.wxs" module="tools" />
   <view class="padding flex flex-direction">
     <button style="color:#ffffff" class="cu-btn bg-blue lg" bindtap="goTodoList">待办列表</button>
-    <button style="color:#ffffff"class="cu-btn bg-blue lg">{{timecount}}</button>
+    <button style="color:#ffffff" class="cu-btn bg-blue lg">{{timecount}}</button>
   </view>
   <view class="seatings">
     <view class="seatings_signs">
